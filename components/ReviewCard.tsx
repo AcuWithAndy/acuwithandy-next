@@ -21,7 +21,7 @@ export default function ReviewCard() {
 
   return (
     <section className="relative z-20 -mt-72 px-8 pb-0 md:-mt-64">
-      <div className="mx-auto max-w-5xl rounded-[48px] bg-[#f7f3ed] px-10 py-16 text-center shadow-[0_30px_80px_rgba(0,0,0,0.12)]">
+      <div className="mx-auto max-w-5xl rounded-[48px] bg-[#FCFCF8] px-10 py-16 text-center shadow-[0_30px_80px_rgba(0,0,0,0.12)]">
         <div className="text-2xl tracking-[0.25em] text-[#D4AF37]">
           ★★★★★
         </div>

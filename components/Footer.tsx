@@ -89,7 +89,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="/hipaa"
+                href="/notice-of-privacy-practices"
                 className="block text-[#4B5C52] transition hover:text-[#1F2A24]"
               >
                 Notice of Privacy Practices

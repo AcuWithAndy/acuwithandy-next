@@ -2,6 +2,7 @@ import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ReviewCard from "../components/ReviewCard";
+import { BOOKING_URL } from "@/lib/booking";
 
 export default function Home() {
   const services = [
@@ -41,11 +42,13 @@ export default function Home() {
 
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
-                  href="/contact"
-                  className="rounded-full bg-white px-8 py-4 text-[#62757B] transition hover:bg-[#f2f2f2]"
-                >
-                  Book Appointment
-                </a>
+  href={BOOKING_URL}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="rounded-full bg-white px-8 py-4 text-[#62757B] transition hover:bg-[#f2f2f2]"
+>
+  Book Appointment
+</a>
 
                 <a
                   href="/services"
@@ -191,11 +194,13 @@ export default function Home() {
       </p>
 
       <a
-        href="/contact"
-        className="mt-10 inline-block rounded-full bg-white px-8 py-4 text-[#5B767B] transition hover:bg-[#F2F2F2]"
-      >
-        Book Appointment
-      </a>
+  href={BOOKING_URL}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-10 inline-block rounded-full bg-white px-8 py-4 text-[#5B767B] transition hover:bg-[#F2F2F2]"
+>
+  Book Appointment
+</a>
     </div>
 
     {/* Right Column */}

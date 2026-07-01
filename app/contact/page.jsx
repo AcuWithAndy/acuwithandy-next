@@ -42,45 +42,22 @@ export default function ContactPage() {
     <>
       <Navbar />
 
-      <main className="bg-[#6E8082] text-[#1F2A24]">
-        <section className="px-6 py-24 text-center">
-          <div className="mx-auto max-w-3xl">
-            <h1 className="font-serif text-5xl leading-tight text-white md:text-7xl">
-              Let&apos;s Work Together
-            </h1>
-
-            <p className="mt-6 text-lg leading-relaxed text-white/90 md:text-xl">
-              Whether you&apos;re interested in acupuncture, herbal medicine, or
-              have questions before scheduling, I&apos;d be happy to hear from
-              you.
-            </p>
-
-            <p className="mt-5 text-lg text-white">
-              You can also text{" "}
-              <a
-                href="sms:+13477892785"
-                className="underline underline-offset-4"
-              >
-                (347) 789-2785
-              </a>
-            </p>
-          </div>
-        </section>
-
+      <main className="bg-[#5B767B] text-[#1F2A24]">
+<div className="h-8"></div>
         <section className="px-6 pb-28">
           <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-[0.9fr_1.4fr]">
-            <div className="rounded-[2rem] bg-[#F7F3ED] p-8 shadow-xl md:p-10">
+            <div className="rounded-[2rem] bg-[#FCFCF8] p-8 shadow-xl md:p-10">
               <h2 className="font-serif text-3xl">Get In Touch</h2>
 
               <div className="mt-8 space-y-6 text-base leading-relaxed">
                 <div>
                   <p className="font-semibold">Location</p>
-                  <p>Midtown Manhattan</p>
-                  <p>Herald Square / Koreatown area</p>
+                  <p>303 5th Avenue, Suite 1209</p>
+                  <p>New York, NY 10016</p>
                 </div>
 
                 <div>
-                  <p className="font-semibold">Phone</p>
+                  <p className="font-semibold">Phone (Text)</p>
                   <a href="sms:+13477892785" className="hover:underline">
                     (347) 789-2785
                   </a>
@@ -102,13 +79,12 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <p className="font-semibold">New Patients</p>
-                  <p>Welcome</p>
+                  <p className="font-semibold">Accepting New Patients</p>
                 </div>
               </div>
             </div>
 
-            <div className="rounded-[2rem] bg-[#F7F3ED] p-8 shadow-xl md:p-10">
+            <div className="rounded-[2rem] bg-[#EFEBFA] p-8 shadow-xl md:p-10">
               <h2 className="font-serif text-3xl">Contact Form</h2>
 
               <form onSubmit={handleSubmit} className="mt-8 space-y-5">
@@ -165,7 +141,7 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={status === "sending"}
-                  className="rounded-full bg-[#DDE6A8] px-10 py-4 text-lg font-medium transition hover:scale-[1.02] hover:bg-[#e7efb8] disabled:opacity-60"
+                  className="rounded-full bg-[#F1FFE0] px-10 py-4 text-lg font-medium transition hover:scale-[1.02] hover:bg-[#E2F5C8] disabled:opacity-60"
                 >
                   {status === "sending" ? "Sending..." : "Submit"}
                 </button>

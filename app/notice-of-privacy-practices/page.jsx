@@ -222,7 +222,7 @@ export default function NoticeOfPrivacyPracticesPage() {
 
               <div className="rounded-2xl border border-[#D8D4CB] bg-white p-6 shadow-sm">
                 <p className="font-semibold">Andy Boehm, LAc</p>
-                <p>AcuWithAndy@gmail.com</p>
+                <p>andy@acuwithandy.com</p>
                 <p>(347) 789-2785</p>
 
                 <hr className="my-6 border-[#E5E5E5]" />

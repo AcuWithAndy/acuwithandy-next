@@ -1,13 +1,14 @@
 import Image from "next/image";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import { BOOKING_URL } from "@/lib/booking";
 
 export default function AboutMePage() {
   return (
     <>
       <Navbar />
 
-      <main className="bg-[#EFEBFA] text-[#1F2A24]">
+      <main className="bg-[#FCFCF8] text-[#1F2A24]">
         <section className="px-8 py-20 md:py-32">
           <div className="mx-auto grid max-w-7xl items-start gap-16 md:grid-cols-[48%_52%] md:gap-20">
             {/* IMAGE */}
@@ -78,11 +79,13 @@ export default function AboutMePage() {
               </div>
 
               <a
-                href="/contact"
-                className="mt-12 inline-block rounded-full bg-[#62757B] px-8 py-4 text-white transition duration-300 hover:bg-[#4B5C52]"
-              >
-                Book Appointment
-              </a>
+  href={BOOKING_URL}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-12 inline-block rounded-full bg-[#62757B] px-8 py-4 text-white transition duration-300 hover:bg-[#4B5C52]"
+>
+  Book Appointment
+</a>
             </div>
           </div>
         </section>
