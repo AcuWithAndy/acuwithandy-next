@@ -22,7 +22,7 @@ export default function ServicesPage() {
     },
     {
       title: "Acupuncture + Herbal Care",
-      price: "Contact for Pricing / Packages",
+      price: "Starts at $150",
       image: "/patient.jpg",
       imageAlt: "Patient receiving acupuncture treatment",
       description:
@@ -50,7 +50,7 @@ export default function ServicesPage() {
     },
     {
       title: "Travel + Special Event Acupuncture",
-      price: "Custom Rates",
+      price: "Contact for Pricing",
       description:
         "Acupuncture services available for hotels, retreats, and private residences outside of New York City.",
       includes: [

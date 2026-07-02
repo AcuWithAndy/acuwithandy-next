@@ -27,7 +27,7 @@ export default function Footer() {
     </p>
 
     <p className="mt-4 text-xs italic text-[#62757B]">
-      Telehealth &amp; in-home care available Tuesday and Friday.
+      Telehealth &amp; In-Home Care ONLY Tuesday and Friday.
     </p>
   </div>
 </div>
