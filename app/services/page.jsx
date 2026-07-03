@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import ReviewCard from "../../components/ReviewCard";
 import { BOOKING_URL } from "@/lib/booking";
 
 export default function ServicesPage() {
@@ -38,6 +37,8 @@ export default function ServicesPage() {
     {
       title: "Concierge In-Home Care",
       price: "Contact for Pricing / Packages",
+      image: "/nyc.jpg",
+      imageAlt: "Acupuncture house call in New York City",
       description:
         "A private, in-home acupuncture session with herbal consultation, available in NYC only.",
       includes: [
@@ -49,8 +50,10 @@ export default function ServicesPage() {
       button: false,
     },
     {
-      title: "Travel + Special Event Acupuncture",
+      title: "Travel + Special Event",
       price: "Contact for Pricing",
+      image: "/spa.jpg",
+      imageAlt: "Wellness retreat treatment room",
       description:
         "Acupuncture services available for hotels, retreats, and private residences outside of New York City.",
       includes: [
@@ -68,16 +71,16 @@ export default function ServicesPage() {
       <Navbar />
 
       <main className="bg-[#EFEBFA] text-[#1F2A24]">
-  <section className="bg-[#5B767B] px-6 pt-24 pb-20 text-center">
-    <div className="mx-auto max-w-4xl">
-      <h1
-        className="text-5xl text-[#FCFCF8] md:text-6xl"
-        style={{ fontFamily: "var(--font-heading)" }}
-      >
-        Explore Your Care Options
-      </h1>
-    </div>
-  </section>
+        <section className="bg-[#5B767B] px-6 pt-24 pb-20 text-center">
+          <div className="mx-auto max-w-4xl">
+            <h1
+              className="text-5xl text-[#FCFCF8] md:text-6xl"
+              style={{ fontFamily: "var(--font-heading)" }}
+            >
+              Explore Your Care Options
+            </h1>
+          </div>
+        </section>
 
         <section className="px-6 py-20">
           <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-2">
@@ -106,10 +109,14 @@ export default function ServicesPage() {
                         width={700}
                         height={450}
                         className={`h-56 w-full rounded-3xl border border-[#E6E2D8] shadow-sm ${
-  service.title === "Acupuncture + Herbal Care"
-    ? "object-cover object-[center_15%]"
-    : "object-cover"
-}`}
+                        service.title === "Acupuncture + Herbal Care"
+  ? "object-cover object-[center_15%]"
+  : service.title === "Concierge In-Home Care"
+  ? "object-cover object-[center_95%]"
+  : service.title === "Travel + Special Event Acupuncture"
+  ? "object-cover object-[center_99%]"
+  : "object-cover object-center"
+                        }`}
                       />
                     </div>
                   )}
@@ -135,8 +142,8 @@ export default function ServicesPage() {
                 {service.button && (
                   <a
                     href={BOOKING_URL}
-target="_blank"
-rel="noopener noreferrer"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="mt-8 inline-flex w-fit items-center justify-center rounded-full bg-[#F1FFE0] px-8 py-4 font-medium text-[#1F2A24] transition hover:bg-[#E2F5C8]"
                   >
                     Book Appointment
