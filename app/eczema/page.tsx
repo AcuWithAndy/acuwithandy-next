@@ -53,7 +53,7 @@ export default function EczemaPage() {
                   width={900}
                   height={500}
                   priority
-                  className="h-52 w-full object-cover object-[center_20%] md:h-64"
+                  className="h-72 w-full object-cover object-[center_18%] md:h-80"
                 />
               </div>
 
@@ -170,7 +170,7 @@ export default function EczemaPage() {
               ))}
             </div>
 
-            <div style={{ height: "50px" }} />
+            <div style={{ height: "40px" }} />
 
             <p className="mt-14 text-lg leading-8 text-[#1F2A24]/80">
               Dietary factors such as spicy, greasy, or overly rich foods may
@@ -199,12 +199,12 @@ export default function EczemaPage() {
 
             <div className="mt-12 overflow-hidden rounded-[2rem] border border-[#E6E2D8] shadow-sm">
               <Image
-                src="/eczema-formula.jpg"
-                alt="Chinese herbal formula for eczema care"
-                width={900}
-                height={600}
-                className="h-64 w-full object-cover object-center md:h-80"
-              />
+  src="/eczema-formula.jpg"
+  alt="Chinese herbal formula for eczema care"
+  width={900}
+  height={600}
+  className="h-72 w-full object-cover object-center md:h-96"
+/>
             </div>
           </div>
         </section>
