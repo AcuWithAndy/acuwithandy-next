@@ -108,7 +108,7 @@ export default function Home() {
 
   <div className="border-l border-[#62757B]/30 pl-6">
     <p className="text-lg leading-8 text-[#4B5C52]">
-      Comprehensive Chinese Medicine services, including Acupuncture, Herbal
+      Comprehensive Chinese Medicine services, including Acupuncture, Electroacupuncture, Herbal
       Medicine, and specialized TCM Dermatology treatment options.
     </p>
   </div>
@@ -122,15 +122,16 @@ export default function Home() {
           image: "/acupuncture.jpg",
         },
         {
+          title: "Electroacupuncture",
+          text: "Gentle electrical stimulation to enhance treatment for pain, muscle recovery, and nervous system regulation.",
+          image: "/estim.jpg",
+        },
+        {
           title: "Herbal Medicine",
           text: "Custom Chinese herbal formulas tailored to your health goals.",
           image: "/herbs.jpg",
         },
-        {
-          title: "TCM Dermatology",
-          text: "Targeted support for eczema, psoriasis, itching, and inflammatory skin conditions.",
-          image: "/dermatology.jpg",
-        },
+        
       ].map((service) => (
         <div
           key={service.title}

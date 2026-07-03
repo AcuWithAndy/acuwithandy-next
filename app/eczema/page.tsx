@@ -48,7 +48,7 @@ export default function EczemaPage() {
             <div className="py-24">
               <div className="overflow-hidden rounded-[2rem] border border-[#E6E2D8] shadow-sm">
                 <Image
-                  src="/eczema.jpg"
+                  src="/dermatology.jpg"
                   alt="Eczema dermatitis on skin"
                   width={900}
                   height={500}
@@ -57,18 +57,6 @@ export default function EczemaPage() {
                 />
               </div>
 
-              <p className="mt-3 text-center text-xs italic text-[#1F2A24]/60">
-                Dermatitis image via{" "}
-                <a
-                  href="https://commons.wikimedia.org/wiki/File:Dermatitis2015.jpg"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline underline-offset-2"
-                >
-                  Wikimedia Commons
-                </a>
-                . Licensed under CC BY-SA 4.0
-              </p>
             </div>
 
             <p className="text-lg leading-8 text-[#1F2A24]/80">
