@@ -168,6 +168,97 @@ export default function Home() {
   </div>
 </section>
 
+<div
+  style={{ backgroundColor: "#EFEBFA" }}
+  className="overflow-hidden leading-none"
+>
+  <svg
+    viewBox="0 0 1440 100"
+    xmlns="http://www.w3.org/2000/svg"
+    className="block h-20 w-full"
+    preserveAspectRatio="none"
+  >
+    <path
+      fill="#E7D0C3"
+      d="M0,40 C240,100 480,80 720,40 C960,0 1200,20 1440,100 L1440,100 L0,100 Z"
+    />
+  </svg>
+</div>
+
+<section
+  style={{ backgroundColor: "#E7D0C3" }}
+  className="px-6 py-24 text-[#1F2A24]"
+>
+  <div className="mx-auto max-w-6xl">
+    <div className="mx-auto mb-14 max-w-3xl text-center">
+      <p className="mb-4 text-xs uppercase tracking-[0.3em] text-[#5B767B]">
+        Specialty Care
+      </p>
+
+      <h2
+        className="text-4xl md:text-5xl"
+        style={{ fontFamily: "var(--font-heading)" }}
+      >
+        TCM Dermatology
+      </h2>
+
+      <p className="mt-6 text-base leading-relaxed text-[#1F2A24]/75 md:text-lg">
+        Explore our approach to treating common dermatological conditions using
+        acupuncture, Chinese herbal medicine, nutrition, and
+        lifestyle modifications..
+      </p>
+    </div>
+
+    <div className="grid gap-6 md:grid-cols-3">
+      {[
+        { title: "Eczema", href: "/eczema" },
+        { title: "Psoriasis", href: "/psoriasis" },
+        { title: "Acne", href: "/acne" },
+        { title: "Rosacea", href: "/rosacea" },
+        { title: "Urticaria", href: "/urticaria" },
+        {
+          title: "Skin Infections",
+          href: "/skin-infections",
+        },
+      ].map((condition) => (
+        <a
+          key={condition.title}
+          href={condition.href}
+          className="group flex h-48 flex-col justify-between rounded-[2rem] border border-[#E6E2D8] bg-[#FCFCF8] p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+        >
+          <h3
+            className="text-3xl leading-tight"
+            style={{ fontFamily: "var(--font-heading)" }}
+          >
+            {condition.title}
+          </h3>
+
+          <span className="text-base font-medium text-[#5B767B] transition-colors duration-300 group-hover:text-[#4A4368]">
+            Learn More →
+          </span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<div
+  className="overflow-hidden leading-none"
+  style={{ backgroundColor: "#E7D0C3" }}
+>
+  <svg
+    viewBox="0 0 1440 100"
+    xmlns="http://www.w3.org/2000/svg"
+    className="block h-20 w-full"
+    preserveAspectRatio="none"
+  >
+    <path
+      fill="#5B767B"
+      d="M0,100 C240,20 480,0 720,40 C960,80 1200,100 1440,40 L1440,100 L0,100 Z"
+    />
+  </svg>
+</div>
+
         <section className="bg-[#5B767B] px-8 py-24">
   <div className="mx-auto grid max-w-7xl gap-16 md:grid-cols-[1fr_1fr] md:items-center">
 
