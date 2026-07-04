@@ -241,7 +241,7 @@ export default function FirstVisitPage() {
                 </p>
               </div>
 
-              <div className="py-24">
+              <div className="mt-12 mb-12 overflow-hidden rounded-[2rem] shadow-xl">
                 <div className="overflow-hidden rounded-[2rem] shadow-xl">
                   <Image
                     src="/herbal-formula.jpg"
@@ -339,7 +339,7 @@ export default function FirstVisitPage() {
             </section>
 
             {/* Ready to Get Started */}
-<section className="bg-[#FCFCF8] px-6 py-20">
+<section className="bg-[#FCFCF8] px-6 py-12 text-center md:py-20">
   <div className="mx-auto max-w-4xl text-center">
     <h2
       className="text-4xl leading-tight text-[#1F2A24] md:text-5xl"
