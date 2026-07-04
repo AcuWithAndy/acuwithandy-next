@@ -26,70 +26,84 @@ export default function Home() {
 
       <main className="bg-[#EFEBFA] text-[#1f2a24]">
         <section className="bg-[#62757B] pb-64 text-white">
-          <div className="mx-auto grid min-h-[85vh] max-w-7xl items-center gap-12 px-8 py-16 md:grid-cols-2 md:py-24">
-            <div className="order-2 md:order-1">
-              <p className="mb-5 text-sm uppercase tracking-[0.35em] text-white/80">
-                ACUWITHANDY.COM
-              </p>
+  <div className="mx-auto grid min-h-[85vh] max-w-7xl items-center gap-12 px-8 py-16 md:grid-cols-2 md:py-24">
+    <div className="order-2 md:order-1 md:max-w-[620px]">
+      <p className="mb-5 text-sm uppercase tracking-[0.35em] text-white/80">
+        ACUWITHANDY.COM
+      </p>
 
-              <h1 className="text-5xl font-semibold leading-tight md:text-7xl">
-                Traditional Chinese Medicine for Dermatology, Pain & Stress
-              </h1>
+      <h1 className="text-4xl font-semibold leading-tight md:text-6xl">
+        Traditional Chinese Medicine for Dermatology, Pain & Stress
+      </h1>
 
-              <p className="mt-8 max-w-xl text-lg leading-8 text-white/80 md:text-xl">
-                Treatments designed to reduce symptoms, clear inflammation and address the underlying imbalances contributing to your condition.
-              </p>
+      <p className="mt-8 max-w-xl text-lg leading-8 text-white/80 md:text-xl">
+        Treatments designed to reduce symptoms, clear inflammation, and address
+        the underlying imbalances contributing to your condition.
+      </p>
 
-              <div className="mt-10 flex flex-wrap gap-4">
-                <a
-  href={BOOKING_URL}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="rounded-full bg-white px-8 py-4 text-[#62757B] transition hover:bg-[#f2f2f2]"
+      <div className="mt-10 flex flex-wrap gap-4">
+        <a
+          href={BOOKING_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-full bg-white px-8 py-4 text-[#62757B] transition hover:bg-[#f2f2f2]"
+        >
+          Book Appointment
+        </a>
+
+        <a
+          href="/services"
+          className="rounded-full border border-white/30 px-8 py-4 text-white transition hover:bg-white hover:text-[#62757B]"
+        >
+          Explore Services
+        </a>
+      </div>
+
+      <a
+  href="/first-visit"
+  className="mt-8 inline-block text-white/90 transition hover:text-white"
 >
-  Book Appointment
+  <p className="text-base uppercase tracking-[0.15em] text-white/70">
+    New to acupuncture?
+  </p>
+
+  <span className="mt-2 block text-lg font-medium underline underline-offset-4">
+    What to Expect at Your First Visit →
+  </span>
 </a>
+    </div>
 
-                <a
-                  href="/services"
-                  className="rounded-full border border-white/30 px-8 py-4 text-white transition hover:bg-white hover:text-[#62757B]"
-                >
-                  Explore Services
-                </a>
-              </div>
-            </div>
+    <div className="relative order-1 flex justify-center md:order-2">
+      <div className="absolute h-[520px] w-[320px] rounded-full bg-white/15 blur-3xl md:h-[700px] md:w-[460px]" />
 
-            <div className="relative order-1 flex justify-center md:order-2">
-  <div className="absolute h-[520px] w-[320px] rounded-full bg-white/15 blur-3xl md:h-[700px] md:w-[460px]" />
-
-  <div
-    className="
-      relative
-      h-[470px]
-      w-full
-      max-w-[320px]
-      overflow-hidden
-      rounded-t-[170px]
-      rounded-b-[24px]
-      shadow-[0_35px_90px_rgba(0,0,0,0.22)]
-      md:h-[640px]
-      md:max-w-[430px]
-      md:rounded-t-[230px]
-      md:rounded-b-[30px]
-    "
-  >
-    <Image
-  src="/headshot.jpg.png"
-  alt="Andy Boehm, Licensed Acupuncturist"
-  fill
-  sizes="(max-width: 768px) 320px, 430px"
-  priority
-  className="object-cover object-center"
-/>
+      <div
+        className="
+          relative
+          h-[470px]
+          w-full
+          max-w-[320px]
+          overflow-hidden
+          rounded-t-[170px]
+          rounded-b-[24px]
+          shadow-[0_35px_90px_rgba(0,0,0,0.22)]
+          md:h-[640px]
+          md:max-w-[430px]
+          md:rounded-t-[230px]
+          md:rounded-b-[30px]
+        "
+      >
+        <Image
+          src="/headshot.jpg.png"
+          alt="Andy Boehm, Licensed Acupuncturist"
+          fill
+          sizes="(max-width: 768px) 320px, 430px"
+          priority
+          className="object-cover object-[center_25%]"
+        />
+      </div>
+    </div>
   </div>
-</div>
-          </div>
-        </section>
+</section>
 
         <ReviewCard />
 
