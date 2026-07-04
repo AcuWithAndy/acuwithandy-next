@@ -1,4 +1,3 @@
-import BackToTop from "@/components/BackToTop";
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Poppins } from "next/font/google";
 import "./globals.css";
@@ -30,7 +29,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${cormorant.variable} ${poppins.variable}`}>
         {children}
-        <BackToTop />
+        <div className="fixed bottom-24 right-6 z-[99999] bg-red-500 p-4 text-white">
+</div>
       </body>
     </html>
   );
