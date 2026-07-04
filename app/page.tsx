@@ -59,18 +59,6 @@ export default function Home() {
         </a>
       </div>
 
-      <a
-  href="/first-visit"
-  className="mt-8 inline-block text-white/90 transition hover:text-white"
->
-  <p className="text-base uppercase tracking-[0.15em] text-white/70">
-    New to acupuncture?
-  </p>
-
-  <span className="mt-2 block text-lg font-medium underline underline-offset-4">
-    What to Expect at Your First Visit →
-  </span>
-</a>
     </div>
 
     <div className="relative order-1 flex justify-center md:order-2">
