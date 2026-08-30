@@ -1,50 +1,30 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.acuwithandy.com";
-
   return [
     {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
+      url: "https://www.acuwithandy.com",
     },
     {
-      url: `${baseUrl}/services`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
+      url: "https://www.acuwithandy.com/services",
     },
     {
-      url: `${baseUrl}/about-me`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
+      url: "https://www.acuwithandy.com/about-me",
     },
     {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
+      url: "https://www.acuwithandy.com/contact",
     },
     {
-      url: `${baseUrl}/faq`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
+      url: "https://www.acuwithandy.com/faq",
     },
     {
-      url: `${baseUrl}/eczema`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
+      url: "https://www.acuwithandy.com/first-visit",
     },
     {
-      url: `${baseUrl}/psoriasis`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
+      url: "https://www.acuwithandy.com/eczema",
+    },
+    {
+      url: "https://www.acuwithandy.com/psoriasis",
     },
   ];
 }
