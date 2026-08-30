@@ -3,9 +3,11 @@
 import { useEffect, useState } from "react";
 
 const reviews = [
-  "Andy is thoughtful, knowledgeable, and really listens.",
-  "Professional, calming, and highly personalized care.",
-  "A compassionate practitioner with a clear and grounded approach.",
+  "Andy is compassionate, knowledgeable, and genuinely invested in his patients.",
+  "Andy has helped me so much with herbal formulas for regulating me through the onset of menopause and its after-effects.",
+  "He was warm, attentive, knowledgeable, and easy to talk to, and made me feel comfortable throughout the electroacupuncture treatment.",
+  "I left feeling so rejuvenated, reenergized, and relaxed!",
+  "I felt I was in good hands the whole time. Highly recommend!"
 ];
 
 export default function ReviewCard() {
@@ -14,7 +16,7 @@ export default function ReviewCard() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentReview((prev) => (prev + 1) % reviews.length);
-    }, 4500);
+    }, 5500);
 
     return () => clearInterval(interval);
   }, []);
@@ -31,10 +33,11 @@ export default function ReviewCard() {
         </h2>
 
         <div className="mx-auto mt-10 flex min-h-[180px] max-w-2xl items-center justify-center md:min-h-[140px]">
-  <blockquote className="text-xl italic leading-9 text-[#1f2a24]">
-    “{reviews[currentReview]}”
-  </blockquote>
-</div>
+          <blockquote className="text-xl italic leading-9 text-[#1f2a24]">
+            “{reviews[currentReview]}”
+          </blockquote>
+        </div>
+
         <a
           href="https://share.google/ikzNq2qBgIa7ogJU0"
           target="_blank"
