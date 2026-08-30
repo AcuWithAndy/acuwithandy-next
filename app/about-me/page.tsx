@@ -3,6 +3,22 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { BOOKING_URL } from "@/lib/booking";
 
+export const metadata = {
+  title: "Andy Boehm, LAc | Acupuncturist & Chinese Herbalist NYC",
+  description:
+    "Meet Andy Boehm, LAc, a licensed acupuncturist and Chinese herbalist in Midtown Manhattan specializing in TCM dermatology, pain, digestive health, and stress support.",
+  alternates: {
+    canonical: "/about-me",
+  },
+  openGraph: {
+    title: "Andy Boehm, LAc | Acupuncturist & Chinese Herbalist NYC",
+    description:
+      "Learn about Andy Boehm, LAc, a licensed acupuncturist and Chinese herbalist in Midtown Manhattan with a focus on dermatology, pain, digestion, and stress support.",
+    url: "https://www.acuwithandy.com/about-me",
+    type: "profile",
+  },
+};
+
 export default function AboutMePage() {
   return (
     <>
@@ -17,7 +33,7 @@ export default function AboutMePage() {
                 <div className="overflow-hidden rounded-t-[340px] rounded-b-[32px] shadow-2xl">
                   <Image
                     src="/headshot.jpg.png"
-                    alt="Andy Boehm, Licensed Acupuncturist"
+                    alt="Andy Boehm, LAc, licensed acupuncturist and Chinese herbalist in New York City"
                     width={950}
                     height={1300}
                     priority
@@ -34,19 +50,19 @@ export default function AboutMePage() {
               </p>
 
               <h1 className="text-6xl leading-tight md:text-7xl">
-                Andy Boehm
+                Andy Boehm, LAc
               </h1>
 
               <p className="mt-4 text-xl text-[#62757B]">
-                Licensed Acupuncturist + Chinese Herbalist
+                Licensed Acupuncturist + Chinese Herbalist in NYC
               </p>
 
               <div className="mt-10 max-w-lg">
                 <div className="space-y-6 text-lg leading-8 text-[#4B5C52]">
                   <p>
-                    I am a licensed acupuncturist and clinical herbalist trained
-                    in both Eastern and Western applications of herbal
-                    supplements, with over four years of focused study in
+                    I am a licensed acupuncturist and clinical herbalist in New
+                    York City, trained in both Eastern and Western applications
+                    of herbal medicine, with over four years of focused study in
                     Chinese medicine and herbal formulation.
                   </p>
 
@@ -56,6 +72,12 @@ export default function AboutMePage() {
                     patients to develop individualized acupuncture treatments
                     and personalized Chinese herbal formulas tailored to their
                     unique health goals.
+                  </p>
+
+                  <p>
+                    My Midtown Manhattan practice focuses on Traditional Chinese
+                    Medicine care for dermatology, musculoskeletal pain,
+                    digestive health, stress, and whole-body wellness.
                   </p>
                 </div>
 
@@ -75,17 +97,16 @@ export default function AboutMePage() {
                 </div>
 
                 <div className="my-12 h-px w-20 bg-[#62757B]/25" />
-
               </div>
 
               <a
-  href={BOOKING_URL}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="mt-12 inline-block rounded-full bg-[#62757B] px-8 py-4 text-white transition duration-300 hover:bg-[#4B5C52]"
->
-  Book Appointment
-</a>
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-12 inline-block rounded-full bg-[#62757B] px-8 py-4 text-white transition duration-300 hover:bg-[#4B5C52]"
+              >
+                Book Appointment
+              </a>
             </div>
           </div>
         </section>
