@@ -3,6 +3,22 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { BOOKING_URL } from "@/lib/booking";
 
+export const metadata = {
+  title: "Acupuncture & Chinese Herbal Medicine NYC",
+  description:
+    "Acupuncture, electroacupuncture, Chinese herbal medicine, in-home care, and personalized Traditional Chinese Medicine services in Midtown Manhattan, NYC.",
+  alternates: {
+    canonical: "/services",
+  },
+  openGraph: {
+    title: "Acupuncture & Chinese Herbal Medicine NYC | Andy Boehm, LAc",
+    description:
+      "Explore acupuncture, Chinese herbal medicine, and personalized Traditional Chinese Medicine care in Midtown Manhattan and throughout NYC.",
+    url: "https://www.acuwithandy.com/services",
+    type: "website",
+  },
+};
+
 export default function ServicesPage() {
   const services = [
     {
@@ -77,7 +93,7 @@ export default function ServicesPage() {
               className="text-5xl text-[#FCFCF8] md:text-6xl"
               style={{ fontFamily: "var(--font-heading)" }}
             >
-              Explore Your Care Options
+              Your Care Options
             </h1>
           </div>
         </section>
@@ -109,13 +125,13 @@ export default function ServicesPage() {
                         width={700}
                         height={450}
                         className={`h-56 w-full rounded-3xl border border-[#E6E2D8] shadow-sm ${
-                        service.title === "Acupuncture + Herbal Care"
-  ? "object-cover object-[center_15%]"
-  : service.title === "Concierge In-Home Care"
-  ? "object-cover object-[center_95%]"
-  : service.title === "Travel + Special Event Acupuncture"
-  ? "object-cover object-[center_99%]"
-  : "object-cover object-center"
+                          service.title === "Acupuncture + Herbal Care"
+                            ? "object-cover object-[center_15%]"
+                            : service.title === "Concierge In-Home Care"
+                            ? "object-cover object-[center_95%]"
+                            : service.title === "Travel + Special Event"
+                            ? "object-cover object-[center_99%]"
+                            : "object-cover object-center"
                         }`}
                       />
                     </div>

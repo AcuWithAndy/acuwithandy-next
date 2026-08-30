@@ -259,7 +259,7 @@ export default function EczemaPage() {
         {title}
       </h3>
 
-      <p className="mt-5 text-lg leading-8 text-[#1F2A24]/75">
+      <p className="max-w-3xl pt-5 text-sm leading-6 text-[#1F2A24]/75">
         {text}
       </p>
     </div>
@@ -269,49 +269,55 @@ export default function EczemaPage() {
         </section>
 
         <section className="px-6 py-20">
-          <div className="mx-auto w-full max-w-[80rem] px-4">
-            <h2
-              className="text-center text-3xl md:text-5xl"
+  <div className="mx-auto w-full max-w-[80rem] px-4">
+    <h2
+      className="text-center text-3xl md:text-5xl"
+      style={{ fontFamily: "var(--font-heading)" }}
+    >
+      Frequently Asked Questions
+    </h2>
+
+    <div className="mx-auto mt-12 max-w-4xl divide-y divide-[#D9D4C9] border-y border-[#D9D4C9]">
+      {[
+        [
+          "How long does eczema treatment take?",
+          "The timeline for eczema treatment depends on the severity, duration, and overall presentation of the condition. Many patients notice meaningful improvement within 6–8 weeks with consistent treatment 1–2 times per week, while relief from itching, inflammation, and discomfort may occur sooner.",
+        ],
+        [
+          "Do I need to use acupuncture and Chinese herbs together?",
+          "Acupuncture and Chinese herbal medicine are often most effective when used together. While acupuncture helps regulate inflammation, stress, and the nervous system, herbal medicine provides ongoing support between sessions to help reduce flare-ups and promote skin healing.",
+        ],
+        [
+          "Can I use acupuncture and Chinese herbs alongside my current medical treatment?",
+          "Yes. Acupuncture and Chinese herbal medicine can often be used alongside conventional dermatological care. Your practitioner will review your medications and supplements to ensure herbs are prescribed safely and appropriately.",
+        ],
+        [
+          "Do you treat topical steroid withdrawal (TSW)?",
+          "Yes. Many patients seek out Chinese medicine for support during topical steroid withdrawal (TSW). Treatment may help reduce inflammation, itching, discomfort, and nervous system dysregulation while supporting the skin's healing process naturally.",
+        ],
+      ].map(([question, answer]) => (
+        <details key={question} className="group py-6">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-left">
+            <h3
+              className="text-2xl leading-tight text-[#1F2A24] md:text-3xl"
               style={{ fontFamily: "var(--font-heading)" }}
             >
-              Frequently Asked Questions
-            </h2>
+              {question}
+            </h3>
 
-            <div className="mt-12 space-y-10">
-              {[
-                [
-                  "How long does eczema treatment take?",
-                  "The timeline for eczema treatment depends on the severity, duration, and overall presentation of the condition. Many patients notice meaningful improvement within 6–8 weeks with consistent treatment 1–2 times per week, while relief from itching, inflammation, and discomfort may occur sooner.",
-                ],
-                [
-                  "Do I need to use acupuncture and Chinese herbs together?",
-                  "Acupuncture and Chinese herbal medicine are often most effective when used together. While acupuncture helps regulate inflammation, stress, and the nervous system, herbal medicine provides ongoing support between sessions to help reduce flare-ups and promote skin healing.",
-                ],
-                [
-                  "Can I use acupuncture and Chinese herbs alongside my current medical treatment?",
-                  "Yes. Acupuncture and Chinese herbal medicine can often be used alongside conventional dermatological care. Your practitioner will review your medications and supplements to ensure herbs are prescribed safely and appropriately.",
-                ],
-                [
-                  "Do you treat topical steroid withdrawal (TSW)?",
-                  "Yes. Many patients seek out Chinese medicine for support during topical steroid withdrawal (TSW). Treatment may help reduce inflammation, itching, discomfort, and nervous system dysregulation while supporting the skin's healing process naturally.",
-                ],
-              ].map(([question, answer]) => (
-                <div key={question} className="border-b border-[#D9D4C9] pb-8">
-                  <h3
-                    className="text-2xl leading-tight text-[#1F2A24] md:text-3xl"
-                    style={{ fontFamily: "var(--font-heading)" }}
-                  >
-                    {question}
-                  </h3>
+            <span className="shrink-0 text-3xl font-light text-[#5B767B] transition-transform duration-300 group-open:rotate-45">
+              +
+            </span>
+          </summary>
 
-                  <p className="mt-5 text-lg leading-8 text-[#1F2A24]/75">
-                    {answer}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+          <p className="max-w-3xl pt-5 text-lg leading-8 text-[#1F2A24]/75">
+            {answer}
+          </p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
 
         <section className="bg-[#5B767B] px-6 py-20 text-center text-[#FCFCF8]">
           <div className="mx-auto w-full max-w-[80rem] px-4">
