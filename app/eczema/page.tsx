@@ -1,7 +1,24 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { BOOKING_URL } from "@/lib/booking";
+
+export const metadata: Metadata = {
+  title: "Eczema Acupuncture & Chinese Medicine NYC",
+  description:
+    "Personalized acupuncture and Chinese herbal medicine for eczema in Midtown Manhattan. Support for itching, dryness, inflammation, flare-ups, atopic dermatitis, dyshidrotic eczema, and TSW.",
+  alternates: {
+    canonical: "/eczema",
+  },
+  openGraph: {
+    title: "Eczema Acupuncture & Chinese Medicine NYC | Andy Boehm, LAc",
+    description:
+      "Acupuncture and Chinese herbal medicine for eczema, itching, inflammation, dryness, and chronic flare-ups in Midtown Manhattan.",
+    url: "https://www.acuwithandy.com/eczema",
+    type: "website",
+  },
+};
 
 export default function EczemaPage() {
   return (

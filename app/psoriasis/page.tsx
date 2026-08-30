@@ -1,7 +1,24 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { BOOKING_URL } from "@/lib/booking";
+
+export const metadata: Metadata = {
+  title: "Psoriasis Acupuncture & Chinese Medicine NYC",
+  description:
+    "Personalized acupuncture and Chinese herbal medicine for psoriasis in Midtown Manhattan. Support for plaques, scaling, itching, inflammation, flare-ups, and psoriatic arthritis.",
+  alternates: {
+    canonical: "/psoriasis",
+  },
+  openGraph: {
+    title: "Psoriasis Acupuncture & Chinese Medicine NYC | Andy Boehm, LAc",
+    description:
+      "Acupuncture and Chinese herbal medicine for psoriasis, scaling, itching, inflammation, chronic flare-ups, and psoriatic arthritis in Midtown Manhattan.",
+    url: "https://www.acuwithandy.com/psoriasis",
+    type: "website",
+  },
+};
 
 export default function PsoriasisPage() {
   return (
