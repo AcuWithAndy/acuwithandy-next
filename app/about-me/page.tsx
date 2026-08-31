@@ -110,6 +110,9 @@ export default function AboutMePage() {
             </div>
           </div>
         </section>
+
+
+
       </main>
 
       <Footer />

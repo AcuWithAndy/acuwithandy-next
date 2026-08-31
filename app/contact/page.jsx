@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
@@ -43,9 +44,12 @@ export default function ContactPage() {
       <Navbar />
 
       <main className="bg-[#5B767B] text-[#1F2A24]">
-<div className="h-8"></div>
+        <div className="h-8"></div>
+
         <section className="px-6 pb-28">
+          {/* CONTACT CARDS */}
           <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-[0.9fr_1.4fr]">
+            {/* GET IN TOUCH */}
             <div className="rounded-[2rem] bg-[#FCFCF8] p-8 shadow-xl md:p-10">
               <h2 className="font-serif text-3xl">Get In Touch</h2>
 
@@ -58,7 +62,10 @@ export default function ContactPage() {
 
                 <div>
                   <p className="font-semibold">Phone (Text)</p>
-                  <a href="sms:+13477892785" className="hover:underline">
+                  <a
+                    href="sms:+13477892785"
+                    className="hover:underline"
+                  >
                     (347) 789-2785
                   </a>
                 </div>
@@ -79,15 +86,21 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <p className="font-semibold">Accepting New Patients</p>
+                  <p className="font-semibold">
+                    Accepting New Patients
+                  </p>
                 </div>
               </div>
             </div>
 
+            {/* CONTACT FORM */}
             <div className="rounded-[2rem] bg-[#EFEBFA] p-8 shadow-xl md:p-10">
               <h2 className="font-serif text-3xl">Contact Form</h2>
 
-              <form onSubmit={handleSubmit} className="mt-8 space-y-5">
+              <form
+                onSubmit={handleSubmit}
+                className="mt-8 space-y-5"
+              >
                 <input
                   name="name"
                   required
@@ -114,14 +127,26 @@ export default function ContactPage() {
                   className="w-full rounded-xl border border-[#D4D1CC] bg-white px-5 py-4 outline-none focus:border-[#DDE6A8]"
                 >
                   <option value="">Reason for Contact</option>
+
                   <option value="Schedule Appointment">
                     Schedule Appointment
                   </option>
+
                   <option value="Insurance Verification">
                     Insurance Verification
                   </option>
-                  <option value="Herbal Refill">Herbal Refill</option>
-                  <option value="General Question">General Question</option>
+
+                  <option value="Herbal Refill">
+                    Herbal Refill
+                  </option>
+
+                  <option value="Workshops & Collaborations">
+                    Workshops & Collaborations
+                  </option>
+
+                  <option value="General Question">
+                    General Question
+                  </option>
                 </select>
 
                 <input
@@ -143,7 +168,9 @@ export default function ContactPage() {
                   disabled={status === "sending"}
                   className="rounded-full bg-[#F1FFE0] px-10 py-4 text-lg font-medium transition hover:scale-[1.02] hover:bg-[#E2F5C8] disabled:opacity-60"
                 >
-                  {status === "sending" ? "Sending..." : "Submit"}
+                  {status === "sending"
+                    ? "Sending..."
+                    : "Submit"}
                 </button>
 
                 {status === "success" && (
@@ -158,6 +185,48 @@ export default function ContactPage() {
                   </p>
                 )}
               </form>
+            </div>
+          </div>
+
+          {/* COMMUNITY + COLLABORATIONS */}
+          <div className="mx-auto mt-10 max-w-6xl overflow-hidden rounded-[2rem] bg-[#FCFCF8] shadow-xl">
+            <div className="grid items-center md:grid-cols-[0.8fr_1.2fr]">
+              {/* TEXT */}
+              <div className="p-8 md:p-12">
+                <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#62757B]">
+                  Community + Collaborations
+                </p>
+
+                <h2 className="font-serif text-3xl leading-tight md:text-4xl">
+                  Beyond the Clinic
+                </h2>
+
+                <p className="mt-6 max-w-md leading-7 text-[#4B5C52]">
+                  I partner with local businesses, wellness brands, 
+                  and community organizations to create engaging 
+                  Chinese medicine workshops, seasonal wellness events, 
+                  and educational experiences centered on herbal medicine, 
+                  food therapy, and acupressure.
+                </p>
+
+                <p className="mt-6 max-w-md text-sm leading-6 text-[#62757B]">
+                  Interested in hosting an event or collaborating?
+                  Send me a message through the contact form above.
+                </p>
+              </div>
+
+              {/* COLLAGE */}
+              <div className="p-4 md:p-6 md:pl-0">
+                <div className="overflow-hidden rounded-[1.5rem]">
+                  <Image
+                    src="/community-collage.png"
+                    alt="Andy Boehm teaching Chinese medicine, seasonal wellness, food therapy, and acupressure at a community event in New York City"
+                    width={1600}
+                    height={1350}
+                    className="h-auto w-full"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </section>
