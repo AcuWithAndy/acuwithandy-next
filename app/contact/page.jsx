@@ -86,9 +86,7 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <p className="font-semibold">
-                    Accepting New Patients
-                  </p>
+                  <p className="font-semibold">Accepting New Patients</p>
                 </div>
               </div>
             </div>
@@ -97,10 +95,7 @@ export default function ContactPage() {
             <div className="rounded-[2rem] bg-[#EFEBFA] p-8 shadow-xl md:p-10">
               <h2 className="font-serif text-3xl">Contact Form</h2>
 
-              <form
-                onSubmit={handleSubmit}
-                className="mt-8 space-y-5"
-              >
+              <form onSubmit={handleSubmit} className="mt-8 space-y-5">
                 <input
                   name="name"
                   required
@@ -168,9 +163,7 @@ export default function ContactPage() {
                   disabled={status === "sending"}
                   className="rounded-full bg-[#F1FFE0] px-10 py-4 text-lg font-medium transition hover:scale-[1.02] hover:bg-[#E2F5C8] disabled:opacity-60"
                 >
-                  {status === "sending"
-                    ? "Sending..."
-                    : "Submit"}
+                  {status === "sending" ? "Sending..." : "Submit"}
                 </button>
 
                 {status === "success" && (
@@ -190,37 +183,37 @@ export default function ContactPage() {
 
           {/* COMMUNITY + COLLABORATIONS */}
           <div className="mx-auto mt-10 max-w-6xl overflow-hidden rounded-[2rem] bg-[#FCFCF8] shadow-xl">
-            <div className="grid items-center md:grid-cols-[0.8fr_1.2fr]">
+            <div className="grid items-start gap-4 md:grid-cols-2 md:gap-6">
               {/* TEXT */}
-              <div className="p-8 md:p-12">
-                <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#62757B]">
+              <div className="p-8 md:px-10 md:py-8">
+                <p className="mb-3 text-sm uppercase tracking-[0.3em] text-[#62757B]">
                   Community + Collaborations
                 </p>
 
                 <h2 className="font-serif text-3xl leading-tight md:text-4xl">
-                  Beyond the Clinic
+                  Chinese Medicine Beyond the Clinic
                 </h2>
 
-                <p className="mt-6 max-w-md leading-7 text-[#4B5C52]">
-                  I partner with local businesses, wellness brands, 
-                  and community organizations to create engaging 
-                  Chinese medicine workshops, seasonal wellness events, 
-                  and educational experiences centered on herbal medicine, 
-                  food therapy, and acupressure.
+                <p className="mt-5 max-w-md leading-7 text-[#4B5C52]">
+                  I collaborate with businesses, wellness brands, and community
+                  organizations to develop thoughtful Chinese medicine
+                  programming—from seasonal wellness workshops and educational
+                  events to experiences featuring herbal medicine, food
+                  therapy, and acupressure.
                 </p>
 
-                <p className="mt-6 max-w-md text-sm leading-6 text-[#62757B]">
-                  Interested in hosting an event or collaborating?
-                  Send me a message through the contact form above.
+                <p className="mt-5 max-w-md text-sm leading-6 text-[#62757B]">
+                  Interested in hosting an event or collaborating? Send me a
+                  message through the contact form above.
                 </p>
               </div>
 
               {/* COLLAGE */}
-              <div className="p-4 md:p-6 md:pl-0">
-                <div className="overflow-hidden rounded-[1.5rem]">
+              <div className="flex justify-center p-6 md:justify-end md:p-8">
+                <div className="w-full max-w-[460px] overflow-hidden rounded-[1.5rem]">
                   <Image
                     src="/community-collage.png"
-                    alt="Andy Boehm teaching Chinese medicine, seasonal wellness, food therapy, and acupressure at a community event in New York City"
+                    alt="Andy Boehm sharing Chinese medicine, seasonal wellness, food therapy, and acupressure at a community event in New York City"
                     width={1600}
                     height={1350}
                     className="h-auto w-full"
