@@ -191,7 +191,7 @@ export default function ContactPage() {
                 </p>
 
                 <h2 className="font-serif text-3xl leading-tight md:text-4xl">
-                  Chinese Medicine Beyond the Clinic
+                  Beyond the Clinic
                 </h2>
 
                 <p className="mt-5 max-w-md leading-7 text-[#4B5C52]">
