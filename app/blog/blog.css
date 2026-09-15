@@ -38,6 +38,10 @@
 .blog-prose ol{list-style:decimal}
 .blog-prose blockquote{border-left:3px solid #62757b;padding:12px 24px;margin-block:30px;font-style:italic}
 .blog-end{margin-top:60px;padding-top:28px;border-top:1px solid #62757b55}
+.blog-inline-figure{margin-block:36px}
+.blog-inline-image{display:block;width:100%;height:auto;max-height:680px;object-fit:contain;border-radius:20px}
+.blog-tags{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin-top:40px}
+.blog-tags li{border:1px solid #62757b66;border-radius:999px;padding:7px 15px;font-size:.875rem}
 .blog-button{display:inline-block;border-radius:999px;background:#F1FFE0;color:#1f2a24;padding:14px 24px;cursor:pointer}
 .blog-surface :focus-visible{outline:3px solid #49636a;outline-offset:5px}
 .blog-hero :focus-visible{outline-color:#F1FFE0}

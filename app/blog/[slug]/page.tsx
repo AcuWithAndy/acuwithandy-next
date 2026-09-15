@@ -33,6 +33,7 @@ export default async function Article({ params }: Props) {
         <img className="blog-article-image" src={post.cover.url} alt={post.cover.alt || ""} width={1200} height={800} />
       </figure>}
       <BlogBody body={post.body} />
+      {post.tags?.length ? <ul className="blog-tags" aria-label="Article topics">{post.tags.map(tag => <li key={tag}>{tag}</li>)}</ul> : null}
       <div className="blog-end"><Link href="/blog">← Back to the journal</Link></div>
     </div>
   </article>;
