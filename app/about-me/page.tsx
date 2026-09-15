@@ -24,9 +24,10 @@ export default function AboutMePage() {
     <>
       <Navbar />
 
-      <main className="bg-[#FCFCF8] text-[#1F2A24]">
+      <main className="overflow-x-hidden bg-[#FCFCF8] text-[#1F2A24]">
         <section className="px-8 py-20 md:py-32">
-          <div className="mx-auto grid max-w-7xl items-start gap-16 md:grid-cols-[48%_52%] md:gap-20">
+          <div className="mx-auto grid max-w-7xl items-start gap-16 md:grid-cols-[minmax(0,48fr)_minmax(0,52fr)] md:gap-20">
+            
             {/* IMAGE */}
             <div className="order-1 flex justify-center md:order-1 md:pt-20">
               <div className="relative w-full max-w-[540px] md:max-w-[660px] md:-translate-y-16">
@@ -44,7 +45,7 @@ export default function AboutMePage() {
             </div>
 
             {/* TEXT */}
-            <div className="order-2 md:order-2">
+            <div className="order-2 min-w-0 md:order-2">
               <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#62757B]">
                 About Me
               </p>
@@ -110,9 +111,6 @@ export default function AboutMePage() {
             </div>
           </div>
         </section>
-
-
-
       </main>
 
       <Footer />
