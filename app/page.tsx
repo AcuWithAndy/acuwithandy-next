@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Navbar from "../components/Navbar";
+import HomeBannerVideo from "../components/HomeBannerVideo";
 import Footer from "../components/Footer";
 import ReviewCard from "../components/ReviewCard";
 import { BOOKING_URL } from "@/lib/booking";
@@ -25,7 +26,8 @@ export default function Home() {
       <Navbar />
 
       <main className="bg-[#EFEBFA] text-[#1f2a24]">
-        <section className="bg-[#62757B] pb-64 text-white">
+        <section className="relative isolate bg-[#62757B] pb-64 text-white">
+          <HomeBannerVideo />
   <div className="mx-auto grid min-h-[85vh] max-w-7xl items-center gap-12 px-8 py-16 md:grid-cols-2 md:py-24">
     <div className="order-2 md:order-1 md:max-w-[620px]">
       <p className="mb-5 text-sm uppercase tracking-[0.35em] text-white/80">
