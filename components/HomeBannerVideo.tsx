@@ -44,7 +44,7 @@ export default function HomeBannerVideo() {
         }}
       >
         <source
-          src="/images/journal/bamboo-homepage-bg.mp4"
+          src="/images/journal/bamboo-homepage-loop.mp4"
           type="video/mp4"
         />
       </video>
