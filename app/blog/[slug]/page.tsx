@@ -20,7 +20,7 @@ export default async function Article({ params }: Props) {
   const { slug } = await params;
   const post = (await getPosts()).find(post => post.slug === slug);
   if (!post) notFound();
-  return <article>
+  return <article className="blog-article">
     <header className="blog-hero blog-article-heading"><div className="blog-reading">
       <Link href="/blog" className="blog-back">← All articles</Link>
       <p className="blog-eyebrow">THE JOURNAL</p><h1>{post.title}</h1>
