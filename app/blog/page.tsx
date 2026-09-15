@@ -13,9 +13,9 @@ export default async function Blog() {
   const posts = await getPosts();
   return <>
     <header className="blog-hero"><div className="blog-wrap">
-      <p className="blog-eyebrow">ACU WITH ANDY / JOURNAL</p>
-      <h1>Notes on<br /><em>living well.</em></h1>
-      <p className="blog-intro">Acupuncture, Chinese herbal medicine, and everyday wellbeing. Thoughts and insights from Andy Boehm, LAc.</p>
+      <p className="blog-eyebrow">ACUWITHANDY.COM / JOURNAL</p>
+      <h1>Insights on<br /><em>living well.</em></h1>
+      <p className="blog-intro">Acupuncture, Chinese herbal medicine, nutrition, and everyday wellbeing.</p>
     </div></header>
     <section className="blog-wrap blog-index" aria-label="Blog posts">
       <div className="blog-section-title"><h2>From the journal</h2><span>{posts.length} {posts.length === 1 ? "article" : "articles"}</span></div>
