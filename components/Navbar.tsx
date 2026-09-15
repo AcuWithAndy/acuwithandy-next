@@ -21,6 +21,7 @@ export default function Navbar() {
     ["Home", "/"],
     ["Services", "/services"],
     ["About Me", "/about-me"],
+    ["Blog", "/blog"],
     ["Contact", "/contact"],
   ];
 
@@ -36,7 +37,7 @@ export default function Navbar() {
             Andy Boehm, LAc.
           </a>
 
-          <div className="hidden justify-center md:flex">
+          <div className="hidden justify-center xl:flex">
             <div className="flex items-center gap-6 text-sm tracking-wide text-white lg:gap-8">
               {links.map(([label, href]) => (
                 <a
@@ -85,7 +86,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="hidden items-center gap-5 md:flex">
+          <div className="hidden items-center gap-5 xl:flex">
             <div className="flex items-center gap-4 border-r border-white/20 pr-5">
               <a
                 href="https://instagram.com/acuwithandy"
@@ -130,7 +131,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setMenuOpen(true)}
-            className="justify-self-end text-3xl leading-none text-white md:hidden"
+            className="col-start-3 justify-self-end text-3xl leading-none text-white xl:hidden"
             aria-label="Open menu"
           >
             ☰
@@ -139,7 +140,7 @@ export default function Navbar() {
       </nav>
 
       <div
-        className={`fixed inset-0 z-[999] bg-[#5B767B] transition-all duration-500 md:hidden ${
+        className={`fixed inset-0 z-[999] overflow-y-auto bg-[#5B767B] transition-all duration-500 xl:hidden ${
           menuOpen
             ? "translate-x-0 opacity-100"
             : "pointer-events-none translate-x-full opacity-0"

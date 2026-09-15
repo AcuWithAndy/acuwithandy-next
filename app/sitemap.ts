@@ -1,7 +1,11 @@
 import type { MetadataRoute } from "next";
+import { getPosts } from "@/lib/blog";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const posts = await getPosts();
   return [
+    { url: "https://www.acuwithandy.com/blog" },
+    ...posts.map(post => ({ url: `https://www.acuwithandy.com/blog/${post.slug}`, lastModified: post.publishedAt })),
     {
       url: "https://www.acuwithandy.com",
     },
