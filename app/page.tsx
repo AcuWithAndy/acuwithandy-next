@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { Suspense } from "react";
+import InstagramFeed from "../components/InstagramFeed";
 import Navbar from "../components/Navbar";
 import HomeBannerVideo from "../components/HomeBannerVideo";
 import Footer from "../components/Footer";
@@ -305,6 +307,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <Suspense fallback={null}>
+          <InstagramFeed />
+        </Suspense>
       </main>
 
       <Footer />
