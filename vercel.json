@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/instagram-renew",
+      "schedule": "17 9 * * *"
+    }
+  ]
+}

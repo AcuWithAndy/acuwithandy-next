@@ -1,4 +1,5 @@
 import "server-only";
+import { getInstagramAccessToken } from "./instagram-token";
 
 export type InstagramPost = {
   id: string;
@@ -21,7 +22,7 @@ function httpsUrl(value: unknown, instagramOnly = false): string | null {
 }
 
 export async function getInstagramPosts(): Promise<InstagramPost[] | null> {
-  const token = process.env.INSTAGRAM_ACCESS_TOKEN;
+  const token = await getInstagramAccessToken();
   const userId = process.env.INSTAGRAM_USER_ID;
   const version = process.env.INSTAGRAM_API_VERSION?.trim() || "v25.0";
   // Remain hidden until the owner's Instagram connection has been configured.
