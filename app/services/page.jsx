@@ -99,78 +99,117 @@ export default function ServicesPage() {
         </section>
 
         <section className="px-6 py-20">
-          <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-2">
-            {services.map((service) => (
+          <div className="mx-auto max-w-6xl">
+            <div className="relative mb-10 overflow-hidden rounded-[2.5rem] border border-[#62757B]/20 shadow-sm">
               <div
-                key={service.title}
-                className="flex flex-col rounded-[2rem] border border-[#E6E2D8] bg-[#FCFCF8] p-8 shadow-sm md:p-10"
-              >
-                <div className="mb-6">
+                className="absolute inset-0 bg-cover bg-center"
+                style={{
+                  backgroundImage: "url('/insurance-acupuncture.jpg')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              />
+              <div className="absolute inset-0 bg-[#1f2a24]/45" />
+
+              <div className="relative p-6 md:p-10">
+                <div className="max-w-xl">
                   <h2
-                    className="text-3xl leading-tight md:text-4xl"
+                    className="text-3xl leading-tight text-white md:text-5xl"
                     style={{ fontFamily: "var(--font-heading)" }}
                   >
-                    {service.title}
+                    Your insurance plan may include acupuncture benefits.
                   </h2>
 
-                  <p className="mt-3 inline-block rounded-full bg-[#F1FFE0] px-4 py-2 text-sm font-medium text-[#1F2A24]">
-                    {service.price}
+                  <div className="mt-6">
+                    <a
+                      href="https://patientportal.allacuservices.com/andyboehm"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-6 py-3 text-sm font-medium text-white transition hover:bg-white hover:text-[#1F2A24]"
+                    >
+                      Verify Insurance Benefits
+                      <span className="ml-2" aria-hidden="true">
+                        →
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid max-w-6xl gap-8 md:grid-cols-2">
+              {services.map((service) => (
+                <div
+                  key={service.title}
+                  className="flex flex-col rounded-[2rem] border border-[#E6E2D8] bg-[#FCFCF8] p-8 shadow-sm md:p-10"
+                >
+                  <div className="mb-6">
+                    <h2
+                      className="text-3xl leading-tight md:text-4xl"
+                      style={{ fontFamily: "var(--font-heading)" }}
+                    >
+                      {service.title}
+                    </h2>
+
+                    <p className="mt-3 inline-block rounded-full bg-[#F1FFE0] px-4 py-2 text-sm font-medium text-[#1F2A24]">
+                      {service.price}
+                    </p>
+
+                    {service.image && (
+                      <div className="mt-6 overflow-hidden rounded-3xl">
+                        <Image
+                          src={service.image}
+                          alt={service.imageAlt}
+                          width={700}
+                          height={450}
+                          className={`h-56 w-full rounded-3xl border border-[#E6E2D8] shadow-sm ${
+                            service.title === "Acupuncture + Herbal Care"
+                              ? "object-cover object-[center_15%]"
+                              : service.title === "Concierge In-Home Care"
+                              ? "object-cover object-[center_95%]"
+                              : service.title === "Travel + Special Event"
+                              ? "object-cover object-[center_99%]"
+                              : "object-cover object-center"
+                          }`}
+                        />
+                      </div>
+                    )}
+                  </div>
+
+                  <p className="text-base leading-relaxed text-[#1F2A24]/80">
+                    {service.description}
                   </p>
 
-                  {service.image && (
-                    <div className="mt-6 overflow-hidden rounded-3xl">
-                      <Image
-                        src={service.image}
-                        alt={service.imageAlt}
-                        width={700}
-                        height={450}
-                        className={`h-56 w-full rounded-3xl border border-[#E6E2D8] shadow-sm ${
-                          service.title === "Acupuncture + Herbal Care"
-                            ? "object-cover object-[center_15%]"
-                            : service.title === "Concierge In-Home Care"
-                            ? "object-cover object-[center_95%]"
-                            : service.title === "Travel + Special Event"
-                            ? "object-cover object-[center_99%]"
-                            : "object-cover object-center"
-                        }`}
-                      />
-                    </div>
+                  <div className="mt-8">
+                    <p className="mb-4 font-semibold">Includes:</p>
+
+                    <ul className="space-y-3">
+                      {service.includes.map((item) => (
+                        <li key={item} className="flex gap-3 leading-relaxed">
+                          <span className="mt-1 text-[#5B767B]">•</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {service.button && (
+                    <a
+                      href={BOOKING_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-8 inline-flex w-fit items-center justify-center rounded-full bg-[#F1FFE0] px-8 py-4 font-medium text-[#1F2A24] transition hover:bg-[#E2F5C8]"
+                    >
+                      Book Appointment
+                    </a>
                   )}
+
+                  <p className="mt-8 border-t border-[#E6E2D8] pt-6 text-sm leading-relaxed text-[#1F2A24]/70">
+                    {service.note}
+                  </p>
                 </div>
-
-                <p className="text-base leading-relaxed text-[#1F2A24]/80">
-                  {service.description}
-                </p>
-
-                <div className="mt-8">
-                  <p className="mb-4 font-semibold">Includes:</p>
-
-                  <ul className="space-y-3">
-                    {service.includes.map((item) => (
-                      <li key={item} className="flex gap-3 leading-relaxed">
-                        <span className="mt-1 text-[#5B767B]">•</span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {service.button && (
-                  <a
-                    href={BOOKING_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-8 inline-flex w-fit items-center justify-center rounded-full bg-[#F1FFE0] px-8 py-4 font-medium text-[#1F2A24] transition hover:bg-[#E2F5C8]"
-                  >
-                    Book Appointment
-                  </a>
-                )}
-
-                <p className="mt-8 border-t border-[#E6E2D8] pt-6 text-sm leading-relaxed text-[#1F2A24]/70">
-                  {service.note}
-                </p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </section>
       </main>

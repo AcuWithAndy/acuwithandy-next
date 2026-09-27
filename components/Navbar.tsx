@@ -27,7 +27,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="relative z-50 w-full border-b border-white/10 bg-[#5B767B]">
+      <header className="relative z-50 w-full border-b border-white/10 bg-[#5B767B]">
         <div className="mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-6 px-6 py-5 md:px-8">
           <a
             href="/"
@@ -137,7 +137,7 @@ export default function Navbar() {
             ☰
           </button>
         </div>
-      </nav>
+      </header>
 
       <div
         className={`fixed inset-0 z-[999] overflow-y-auto bg-[#5B767B] transition-all duration-500 xl:hidden ${
