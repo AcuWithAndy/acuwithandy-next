@@ -93,7 +93,7 @@ export default function ServicesPage() {
               className="text-5xl text-[#FCFCF8] md:text-6xl"
               style={{ fontFamily: "var(--font-heading)" }}
             >
-              Your Care Options
+              Acupuncture & Herbal Care
             </h1>
           </div>
         </section>
@@ -125,7 +125,7 @@ export default function ServicesPage() {
                       href="https://patientportal.allacuservices.com/andyboehm"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-6 py-3 text-sm font-medium text-white transition hover:bg-white hover:text-[#1F2A24]"
+                      className="inline-flex items-center justify-center rounded-full bg-[#F1FFE0] px-6 py-3 text-sm font-medium text-[#1F2A24] transition hover:bg-[#E2F5C8]"
                     >
                       Verify Insurance Benefits
                       <span className="ml-2" aria-hidden="true">
