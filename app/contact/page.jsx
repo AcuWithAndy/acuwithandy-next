@@ -47,7 +47,9 @@ export default function ContactPage() {
         <div className="h-8"></div>
 
         <section className="px-6 pb-28">
+          {/* CONTACT CARDS */}
           <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-[0.9fr_1.4fr]">
+            {/* GET IN TOUCH */}
             <div className="rounded-[2rem] bg-[#FCFCF8] p-8 shadow-xl md:p-10">
               <h2 className="font-serif text-3xl">Get In Touch</h2>
 
@@ -60,14 +62,20 @@ export default function ContactPage() {
 
                 <div>
                   <p className="font-semibold">Phone (Text)</p>
-                  <a href="sms:+13477892785" className="hover:underline">
+                  <a
+                    href="sms:+13477892785"
+                    className="hover:underline"
+                  >
                     (347) 789-2785
                   </a>
                 </div>
 
                 <div>
                   <p className="font-semibold">Email</p>
-                  <a href="mailto:andy@acuwithandy.com" className="hover:underline">
+                  <a
+                    href="mailto:andy@acuwithandy.com"
+                    className="hover:underline"
+                  >
                     andy@acuwithandy.com
                   </a>
                 </div>
@@ -94,6 +102,7 @@ export default function ContactPage() {
               </div>
             </div>
 
+            {/* CONTACT FORM */}
             <div className="rounded-[2rem] bg-[#EFEBFA] p-8 shadow-xl md:p-10">
               <h2 className="font-serif text-3xl">Contact Form</h2>
 
@@ -183,8 +192,10 @@ export default function ContactPage() {
             </div>
           </div>
 
+          {/* COMMUNITY + COLLABORATIONS */}
           <div className="mx-auto mt-10 max-w-6xl overflow-hidden rounded-[2rem] bg-[#FCFCF8] shadow-xl">
             <div className="grid items-start gap-4 md:grid-cols-2 md:gap-6">
+              {/* TEXT */}
               <div className="p-8 md:px-10 md:py-8">
                 <p className="mb-3 text-sm uppercase tracking-[0.3em] text-[#62757B]">
                   Community + Collaborations
@@ -208,6 +219,7 @@ export default function ContactPage() {
                 </p>
               </div>
 
+              {/* COLLAGE */}
               <div className="flex justify-center p-6 md:justify-end md:p-8">
                 <div className="w-full max-w-[460px] overflow-hidden rounded-[1.5rem]">
                   <Image
