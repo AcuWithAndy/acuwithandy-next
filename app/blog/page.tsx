@@ -20,7 +20,6 @@ export default async function Blog() {
         loop
         playsInline
         preload="metadata"
-        poster="/insurance-acupuncture.jpg"
         className="blog-hero-video motion-reduce:hidden"
       >
         <source src="/images/journal/bamboo-homepage-loop.mp4" type="video/mp4" />
