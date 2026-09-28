@@ -87,57 +87,46 @@ export default function ServicesPage() {
       <Navbar />
 
       <main className="bg-[#EFEBFA] text-[#1F2A24]">
-        <section className="bg-[#5B767B] px-6 pt-24 pb-20 text-center">
-          <div className="mx-auto max-w-4xl">
-            <h1
-              className="text-5xl text-[#FCFCF8] md:text-6xl"
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
-              Acupuncture & Herbal Care
-            </h1>
+        <section className="relative overflow-hidden">
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage: "url('/insurance-acupuncture.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          />
+          <div className="absolute inset-0 bg-[#1f2a24]/45" />
+
+          <div className="relative mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-24">
+            <div className="max-w-xl">
+              <h1
+                className="text-3xl leading-tight text-white md:text-5xl"
+                style={{ fontFamily: "var(--font-heading)" }}
+              >
+                Your insurance plan may include acupuncture benefits.
+              </h1>
+
+              <div className="mt-6">
+                <a
+                  href="https://patientportal.allacuservices.com/andyboehm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-full bg-[#F1FFE0] px-6 py-3 text-sm font-medium text-[#1F2A24] transition hover:bg-[#E2F5C8]"
+                >
+                  Verify Insurance Benefits
+                  <span className="ml-2" aria-hidden="true">
+                    →
+                  </span>
+                </a>
+              </div>
+            </div>
           </div>
         </section>
 
         <section className="px-6 py-20">
           <div className="mx-auto max-w-6xl">
-            <div className="relative mb-10 overflow-hidden rounded-[2.5rem] border border-[#62757B]/20 shadow-sm">
-              <div
-                className="absolute inset-0 bg-cover bg-center"
-                style={{
-                  backgroundImage: "url('/insurance-acupuncture.jpg')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              />
-              <div className="absolute inset-0 bg-[#1f2a24]/45" />
-
-              <div className="relative p-6 md:p-10">
-                <div className="max-w-xl">
-                  <h2
-                    className="text-3xl leading-tight text-white md:text-5xl"
-                    style={{ fontFamily: "var(--font-heading)" }}
-                  >
-                    Your insurance plan may include acupuncture benefits.
-                  </h2>
-
-                  <div className="mt-6">
-                    <a
-                      href="https://patientportal.allacuservices.com/andyboehm"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center rounded-full bg-[#F1FFE0] px-6 py-3 text-sm font-medium text-[#1F2A24] transition hover:bg-[#E2F5C8]"
-                    >
-                      Verify Insurance Benefits
-                      <span className="ml-2" aria-hidden="true">
-                        →
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="grid max-w-6xl gap-8 md:grid-cols-2">
+            <div className="grid gap-8 md:grid-cols-2">
               {services.map((service) => (
                 <div
                   key={service.title}
