@@ -28,7 +28,7 @@ export default function Navbar() {
   return (
     <>
       <nav className="relative z-50 w-full border-b border-white/10 bg-[#5B767B]">
-        <div className="mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-6 px-6 py-5 md:px-8">
+        <div className="mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-6 px-6 py-5 md:px-8 xl:gap-x-12">
           <a
             href="/"
             className="shrink-0 whitespace-nowrap text-xl leading-none text-white md:text-[1.35rem] lg:text-[1.45rem]"
@@ -37,8 +37,8 @@ export default function Navbar() {
             Andy Boehm, LAc.
           </a>
 
-          <div className="hidden justify-center xl:flex">
-            <div className="flex items-center gap-6 text-sm tracking-wide text-white lg:gap-8">
+          <div className="hidden justify-start xl:flex">
+            <div className="flex items-center gap-4 text-xs tracking-wide text-white lg:gap-6">
               {links.map(([label, href]) => (
                 <a
                   key={label}
@@ -49,7 +49,7 @@ export default function Navbar() {
                 </a>
               ))}
 
-              <div className="relative">
+              <div className="relative xl:mr-12">
                 <button
                   type="button"
                   onClick={() => setFaqOpen(!faqOpen)}
@@ -66,17 +66,17 @@ export default function Navbar() {
                 </button>
 
                 {faqOpen && (
-                  <div className="absolute left-1/2 top-full z-[9999] mt-3 w-80 -translate-x-1/2 overflow-hidden rounded-2xl border border-[#E6E2D8] bg-white shadow-2xl">
+                  <div className="absolute right-0 top-full z-[9999] mt-6 w-64 overflow-hidden rounded-2xl border border-[#E6E2D8] bg-white shadow-2xl">
                     <a
                       href="/faq/general"
-                      className="block whitespace-nowrap border-b border-[#E6E2D8] px-6 py-4 text-base font-medium text-[#1F2A24] transition hover:bg-[#FCFCF8] hover:text-[#4A4368]"
+                      className="block whitespace-nowrap border-b border-[#E6E2D8] px-4 py-3 text-sm font-medium text-[#1F2A24] transition hover:bg-[#FCFCF8] hover:text-[#4A4368]"
                     >
                       General FAQ
                     </a>
 
                     <a
                       href="/faq/herbal-medicine"
-                      className="block whitespace-nowrap px-6 py-4 text-base font-medium text-[#1F2A24] transition hover:bg-[#FCFCF8] hover:text-[#4A4368]"
+                      className="block whitespace-nowrap px-4 py-3 text-sm font-medium text-[#1F2A24] transition hover:bg-[#FCFCF8] hover:text-[#4A4368]"
                     >
                       Herbal Medicine FAQ
                     </a>
@@ -224,7 +224,7 @@ export default function Navbar() {
 
           <div className="flex-1" />
 
-          <div className="flex gap-5">
+          <div className="flex translate-y-8 gap-5">
             <a
               href="https://instagram.com/acuwithandy"
               target="_blank"
