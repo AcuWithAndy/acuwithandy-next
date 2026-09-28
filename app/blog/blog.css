@@ -2,9 +2,9 @@
 .blog-article{background:#fff}
 .blog-wrap{max-width:1200px;margin:auto;padding-inline:32px}
 .blog-hero{position:relative;isolation:isolate;overflow:hidden;background:#62757b;color:#fff;padding-block:76px 88px}
-.blog-hero-video,.blog-hero-overlay{position:absolute;inset:0;width:100%;height:100%}
+.blog-hero-video{position:absolute;inset:0;width:100%;height:100%}
 .blog-hero-video{z-index:-1;object-fit:cover;object-position:center 40%}
-.blog-hero-overlay{z-index:-1;background:linear-gradient(90deg,rgba(31,42,36,.78),rgba(31,42,36,.5))}
+.blog-hero-overlay{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(31,42,36,.78),rgba(31,42,36,.5))}
 .blog-hero .journal-hero-copy{position:relative}
 .blog-eyebrow{font-size:.875rem;letter-spacing:.24em;margin-bottom:26px}
 .blog-hero h1{font-size:clamp(3.5rem,7vw,6.5rem);line-height:1.04;font-weight:400;letter-spacing:-.025em;max-width:900px;overflow-wrap:anywhere}
