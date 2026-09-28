@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import JournalCollage from "@/components/JournalCollage";
 import { formatDate, getPosts, readTime } from "@/lib/blog";
 
 export const metadata: Metadata = {
@@ -13,11 +12,26 @@ export const metadata: Metadata = {
 export default async function Blog() {
   const posts = await getPosts();
   return <>
-    <header className="blog-hero"><div className="blog-wrap journal-hero-layout"><div className="journal-hero-copy">
-      <p className="blog-eyebrow">ACUWITHANDY.COM / JOURNAL</p>
-      <h1>Insights on<br /><em>living well.</em></h1>
-      <p className="blog-intro">Acupuncture, Chinese herbal medicine, nutrition, and everyday wellbeing.</p>
-    </div><JournalCollage /></div></header>
+    <header className="blog-hero">
+      <video
+        aria-hidden="true"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        poster="/insurance-acupuncture.jpg"
+        className="blog-hero-video motion-reduce:hidden"
+      >
+        <source src="/images/journal/bamboo-homepage-loop.mp4" type="video/mp4" />
+      </video>
+      <div className="blog-hero-overlay" aria-hidden="true" />
+      <div className="blog-wrap journal-hero-copy">
+        <p className="blog-eyebrow">ACUWITHANDY.COM / JOURNAL</p>
+        <h1>Insights on<br /><em>living well.</em></h1>
+        <p className="blog-intro">Acupuncture, Chinese herbal medicine, nutrition, and everyday wellbeing.</p>
+      </div>
+    </header>
     <section className="blog-wrap blog-index" aria-label="Blog posts">
       <div className="blog-section-title"><h2>From the journal</h2><span>{posts.length} {posts.length === 1 ? "article" : "articles"}</span></div>
       {posts.length === 0 ? <div className="blog-empty"><h3>A little space for what’s next.</h3><p>New articles will appear here soon. Thank you for stopping by.</p></div> :

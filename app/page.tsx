@@ -53,7 +53,7 @@ export default function Home() {
                   href="https://patientportal.allacuservices.com/andyboehm"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-full border border-white/30 bg-white/10 px-8 py-4 text-white shadow-[0_0_20px_rgba(255,255,255,0.18)] transition hover:bg-white hover:text-[#62757B]"
+                  className="rounded-full border border-white/30 px-8 py-4 text-white transition hover:bg-white hover:text-[#62757B]"
                 >
                   Verify Insurance Benefits
                 </a>

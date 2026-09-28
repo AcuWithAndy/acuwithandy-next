@@ -1,7 +1,11 @@
 .blog-surface{background:#EFEBFA;color:#1f2a24;min-height:65vh}
 .blog-article{background:#fff}
 .blog-wrap{max-width:1200px;margin:auto;padding-inline:32px}
-.blog-hero{background:#62757b;color:#fff;padding-block:76px 88px}
+.blog-hero{position:relative;isolation:isolate;overflow:hidden;background:#62757b;color:#fff;padding-block:76px 88px}
+.blog-hero-video,.blog-hero-overlay{position:absolute;inset:0;width:100%;height:100%}
+.blog-hero-video{z-index:-1;object-fit:cover;object-position:center 40%}
+.blog-hero-overlay{z-index:-1;background:linear-gradient(90deg,rgba(31,42,36,.78),rgba(31,42,36,.5))}
+.blog-hero .journal-hero-copy{position:relative}
 .blog-eyebrow{font-size:.875rem;letter-spacing:.24em;margin-bottom:26px}
 .blog-hero h1{font-size:clamp(3.5rem,7vw,6.5rem);line-height:1.04;font-weight:400;letter-spacing:-.025em;max-width:900px;overflow-wrap:anywhere}
 .blog-hero h1 em{color:#F1FFE0;font-weight:400}
@@ -52,17 +56,8 @@
 .blog-hero :focus-visible{outline-color:#F1FFE0}
 @media(max-width:700px){.blog-wrap{padding-inline:22px}.blog-hero{padding-block:48px 58px}.blog-grid{grid-template-columns:1fr}.blog-card-content{padding:24px}.blog-section-title h2{font-size:2rem}.blog-reading{padding-inline:22px}.blog-eyebrow{font-size:.8rem;letter-spacing:.16em}.blog-empty{padding-inline:18px}.blog-empty h3{font-size:2rem}}
 
-/* Journal introduction and its three photo tiles. */
-.blog-hero .journal-hero-layout{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:64px}
-.journal-hero-copy{min-width:0}
+/* Journal introduction. */
 .journal-hero-copy h1{font-size:clamp(3.5rem,6.2vw,5.6rem);overflow-wrap:normal}
 .journal-hero-copy .blog-intro{max-width:460px}
-.journal-collage{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(12,1fr);gap:14px;height:500px;min-width:0;transform:rotate(-2deg)}
-.journal-tile{position:relative;overflow:hidden;border-radius:14px;background:#52666b;box-shadow:0 12px 28px #172a2920}
-.journal-tile img{object-fit:cover;width:100%;height:100%;display:block}
-.journal-food{grid-column:1;grid-row:2/12}
-.journal-flower{grid-column:2;grid-row:1/7}
-.journal-herbs{grid-column:2;grid-row:7/13}
-@media(max-width:1000px){.blog-hero .journal-hero-layout{gap:32px}.journal-collage{height:430px}.journal-hero-copy h1{font-size:4rem}}
-@media(max-width:800px){.blog-hero .journal-hero-layout{grid-template-columns:1fr;gap:34px}.journal-hero-copy h1{font-size:clamp(3.4rem,11vw,5rem)}.journal-collage{height:460px;width:100%;max-width:520px;margin-inline:auto;transform:none}.journal-hero-copy .blog-intro{max-width:580px}}
-@media(max-width:420px){.journal-collage{height:370px;gap:10px}.journal-tile{border-radius:10px}}
+@media(max-width:1000px){.journal-hero-copy h1{font-size:4rem}}
+@media(max-width:800px){.journal-hero-copy h1{font-size:clamp(3.4rem,11vw,5rem)}.journal-hero-copy .blog-intro{max-width:580px}}
