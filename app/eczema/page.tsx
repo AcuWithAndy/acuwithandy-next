@@ -26,27 +26,14 @@ export default function EczemaPage() {
       <Navbar />
 
       <main className="bg-[#FCFCF8] text-[#1F2A24]">
-        <section className="bg-[#5B767B] px-6 py-24 text-center text-[#FCFCF8]">
-          <p className="mb-5 text-xs uppercase tracking-[0.3em] text-[#FCFCF8]/80">
-            TCM Dermatology
-          </p>
-
-          <h1
-            className="text-5xl md:text-6xl"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            Eczema & Chinese Medicine
-          </h1>
-        </section>
-
         <section style={{ backgroundColor: "#FCFCF8" }} className="px-6 py-20">
           <div className="mx-auto w-full max-w-[80rem] px-4">
-            <h2
+            <h1
               className="text-3xl leading-tight text-[#5F587A] md:text-5xl"
               style={{ fontFamily: "var(--font-heading)" }}
             >
-              Eczema Overview
-            </h2>
+              Eczema & Chinese Medicine
+            </h1>
 
             <p className="mt-8 text-lg leading-8 text-[#1F2A24]/80">
               Eczema is a chronic inflammatory skin condition that can affect
