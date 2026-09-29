@@ -80,7 +80,7 @@ export default function ServicesBanner() {
 
   return (
     <section
-      className="relative isolate aspect-[2056/765] w-full overflow-hidden bg-white"
+      className="relative isolate aspect-[16/9] w-full overflow-hidden bg-white md:aspect-[2056/765]"
       aria-roledescription="carousel"
       aria-label="Services highlights"
     >
