@@ -13,7 +13,7 @@ const slides = [
         href="https://patientportal.allacuservices.com/andyboehm"
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-4 inline-flex items-center justify-center rounded-full bg-[#F1FFE0] px-4 py-2 text-xs font-medium text-[#1F2A24] transition hover:bg-[#E2F5C8] md:mt-7 md:px-6 md:py-3 md:text-sm"
+        className="mt-4 inline-flex items-center justify-center rounded-full bg-[#F1FFE0] px-5 py-3 text-sm font-medium text-[#1F2A24] transition hover:bg-[#E2F5C8] md:mt-7 md:px-7 md:py-4 md:text-base"
       >
         Verify Benefits
         <span className="ml-2" aria-hidden="true">
@@ -31,7 +31,7 @@ const slides = [
     action: (
       <a
         href="https://www.acuwithandy.com/faq/herbal-medicine"
-        className="mt-4 inline-flex items-center justify-center rounded-full bg-[#F1FFE0] px-4 py-2 text-xs font-medium text-[#1F2A24] transition hover:bg-[#E2F5C8] md:mt-7 md:px-6 md:py-3 md:text-sm"
+        className="mt-4 inline-flex items-center justify-center rounded-full bg-[#F1FFE0] px-5 py-3 text-sm font-medium text-[#1F2A24] transition hover:bg-[#E2F5C8] md:mt-7 md:px-7 md:py-4 md:text-base"
       >
         Learn More
         <span className="ml-2" aria-hidden="true">
@@ -48,7 +48,7 @@ const slides = [
     action: (
       <a
         href="https://www.acuwithandy.com/faq/general"
-        className="mt-4 inline-flex items-center justify-center rounded-full bg-[#F1FFE0] px-4 py-2 text-xs font-medium text-[#1F2A24] transition hover:bg-[#E2F5C8] md:mt-7 md:px-6 md:py-3 md:text-sm"
+        className="mt-4 inline-flex items-center justify-center rounded-full bg-[#F1FFE0] px-5 py-3 text-sm font-medium text-[#1F2A24] transition hover:bg-[#E2F5C8] md:mt-7 md:px-7 md:py-4 md:text-base"
       >
         Learn More
         <span className="ml-2" aria-hidden="true">
@@ -80,7 +80,7 @@ export default function ServicesBanner() {
 
   return (
     <section
-      className="relative isolate aspect-[16/9] w-full overflow-hidden bg-white md:aspect-[2056/765]"
+      className="relative isolate aspect-[4/3] w-full overflow-hidden bg-white md:aspect-[2056/765]"
       aria-roledescription="carousel"
       aria-label="Services highlights"
     >
@@ -117,7 +117,7 @@ export default function ServicesBanner() {
                 slide.tone === "light"
                   ? "bg-gradient-to-r from-[#1f2a24]/80 via-[#1f2a24]/45 via-80% to-transparent"
                   : slide.tone === "photo"
-                  ? "bg-gradient-to-r from-[#1f2a24]/70 via-[#1f2a24]/25 to-transparent"
+                  ? "bg-gradient-to-r from-[#1f2a24]/80 via-[#1f2a24]/40 via-60% to-transparent"
                   : "bg-gradient-to-l from-[#1f2a24]/70 via-[#1f2a24]/40 via-65% to-transparent"
               }`}
             />
@@ -125,19 +125,21 @@ export default function ServicesBanner() {
 
           {(slide.title || slide.action) && (
             <div
-              className={`relative mx-auto flex h-full max-w-6xl items-center px-4 md:px-8 ${
+              className={`relative mx-auto flex h-full max-w-6xl items-center px-4 pb-8 md:px-8 md:pb-0 ${
                 slide.tone === "dark" ? "justify-end" : ""
               }`}
             >
               <div
                 className={`max-w-xl ${
                   slide.tone === "light" || slide.tone === "photo"
-                    ? "w-[54%] text-white md:w-[43%] md:max-w-lg"
+                    ? slide.tone === "light"
+                      ? "w-[68%] text-white md:w-[43%] md:max-w-lg"
+                      : "w-[60%] text-white md:w-[43%] md:max-w-lg"
                     : "ml-auto w-[62%] text-right text-white md:w-[54%]"
                 }`}
               >
                 <h1
-                  className="text-[clamp(1.125rem,4.8vw,1.5rem)] leading-tight md:text-[clamp(0.875rem,3.2vw,3rem)]"
+                  className="text-[clamp(1.5rem,6vw,2rem)] leading-tight md:text-[clamp(1.5rem,4vw,3.75rem)]"
                   style={{
                     fontFamily: "var(--font-heading)",
                   }}
