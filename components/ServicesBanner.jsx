@@ -24,7 +24,7 @@ const slides = [
   },
   {
     title:
-      "Herbal formulas are selected with a commitment to purity, quality and trust.",
+      "Herbal medicine you can trust- Carefully sourced formulas selected with a commitment to quality.",
     image: "/kamwo.jpg",
     imageAlt: "Carefully selected Chinese herbs and botanicals",
     tone: "light",
@@ -41,7 +41,7 @@ const slides = [
     ),
   },
   {
-    title: "Experience a more balanced approach to wellness with Acupuncture.",
+    title: "Personalized acupuncture, grounded in traditional Chinese medicine.",
     image: "/model.jpg",
     imageAlt: "Model featured in acupuncture services photography",
     tone: "photo",
