@@ -111,10 +111,12 @@ export default function ServicesBanner() {
             role="img"
             aria-label={slide.imageAlt}
           />
-          {(slide.tone === "dark" || slide.tone === "photo") && (
+          {(slide.tone === "dark" || slide.tone === "photo" || slide.tone === "light") && (
             <div
               className={`absolute inset-0 ${
-                slide.tone === "photo"
+                slide.tone === "light"
+                  ? "bg-gradient-to-r from-[#1f2a24]/70 via-[#1f2a24]/25 via-75% to-transparent"
+                  : slide.tone === "photo"
                   ? "bg-gradient-to-r from-[#1f2a24]/70 via-[#1f2a24]/25 to-transparent"
                   : "bg-gradient-to-l from-[#1f2a24]/70 via-[#1f2a24]/40 via-65% to-transparent"
               }`}
@@ -130,17 +132,14 @@ export default function ServicesBanner() {
               <div
                 className={`max-w-xl ${
                   slide.tone === "light" || slide.tone === "photo"
-                    ? slide.tone === "photo"
-                      ? "w-[54%] text-white md:w-[43%] md:max-w-lg"
-                      : "w-[54%] text-[#1F2A24] md:w-[43%] md:max-w-lg"
+                    ? "w-[54%] text-white md:w-[43%] md:max-w-lg"
                     : "ml-auto w-[62%] text-right text-white md:w-[54%]"
                 }`}
               >
                 <h1
-                  className="leading-tight"
+                  className="text-[clamp(1.125rem,4.8vw,1.5rem)] leading-tight md:text-[clamp(0.875rem,3.2vw,3rem)]"
                   style={{
                     fontFamily: "var(--font-heading)",
-                    fontSize: "clamp(0.875rem, 3.2vw, 3rem)",
                   }}
                 >
                   {slide.title}
