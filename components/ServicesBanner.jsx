@@ -115,7 +115,7 @@ export default function ServicesBanner() {
             <div
               className={`absolute inset-0 ${
                 slide.tone === "light"
-                  ? "bg-gradient-to-r from-[#1f2a24]/70 via-[#1f2a24]/25 via-75% to-transparent"
+                  ? "bg-gradient-to-r from-[#1f2a24]/80 via-[#1f2a24]/45 via-80% to-transparent"
                   : slide.tone === "photo"
                   ? "bg-gradient-to-r from-[#1f2a24]/70 via-[#1f2a24]/25 to-transparent"
                   : "bg-gradient-to-l from-[#1f2a24]/70 via-[#1f2a24]/40 via-65% to-transparent"
