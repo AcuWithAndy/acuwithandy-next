@@ -24,7 +24,7 @@ const slides = [
   },
   {
     title:
-      "Herbal formulas prescribed are selected with a commitment to purity, quality and trust.",
+      "Herbal formulas are selected with a commitment to purity, quality and trust.",
     image: "/kamwo.jpg",
     imageAlt: "Carefully selected Chinese herbs and botanicals",
     tone: "light",
