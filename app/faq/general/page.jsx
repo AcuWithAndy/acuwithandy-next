@@ -169,34 +169,35 @@ export default function GeneralFAQPage() {
           </p>
 
           <h1
-            className="mb-24 text-5xl leading-tight text-[#4A4368] md:text-6xl"
+            className="mb-8 text-5xl leading-tight text-[#4A4368] md:text-6xl"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             General FAQ
           </h1>
 
-          <div className="pt-20">
-            {faqs.map((item, index) => (
-              <div key={item.q}>
-                <section className="pb-10">
+          <div>
+            {faqs.map((item) => (
+              <details key={item.q} className="group py-6">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-left">
                   <h2
-                    className="mb-6 text-3xl leading-tight text-[#4A4368] md:text-4xl"
+                    className="text-2xl leading-tight text-[#1F2A24] md:text-3xl"
                     style={{ fontFamily: "var(--font-heading)" }}
                   >
                     {item.q}
                   </h2>
 
-                  <div className="text-lg leading-10 text-[#4B5C52]">
-                    {item.a}
-                  </div>
-                </section>
+                  <span
+                    aria-hidden="true"
+                    className="shrink-0 text-3xl font-light text-[#5B767B] transition-transform duration-300 group-open:rotate-45"
+                  >
+                    +
+                  </span>
+                </summary>
 
-                {index !== faqs.length - 1 && (
-                  <div className="my-16 flex justify-center">
-                    <div className="h-px w-48 bg-[#DDD8CF]" />
-                  </div>
-                )}
-              </div>
+                <div className="max-w-3xl pt-5 text-base leading-7 text-[#1F2A24]/75">
+                  {item.a}
+                </div>
+              </details>
             ))}
           </div>
         </section>
