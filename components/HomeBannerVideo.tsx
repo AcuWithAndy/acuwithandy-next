@@ -53,7 +53,7 @@ export default function HomeBannerVideo() {
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(90deg, rgba(31,42,36,.78), rgba(31,42,36,.5))",
+            "linear-gradient(90deg, rgba(91,118,123,.78), rgba(91,118,123,.5))",
         }}
       />
     </div>
