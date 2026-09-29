@@ -34,10 +34,14 @@ export default function ServicesPage() {
         "Customized herbal formula prescription",
       ],
       note: "Herbal formulas are billed separately and fulfilled through Kamwo Herbal Pharmacy in New York City. Prescriptions may be picked up, messenger-delivered within Manhattan, or shipped.",
-      button: true,
+      action: {
+        label: "Book Appointment",
+        href: BOOKING_URL,
+        external: true,
+      },
     },
     {
-      title: "Acupuncture + Herbal Care",
+      title: "Acupuncture + Herbal",
       price: "Starts at $150",
       image: "/patient.jpg",
       imageAlt: "Patient receiving acupuncture treatment",
@@ -49,11 +53,15 @@ export default function ServicesPage() {
         "Customized herbal formula prescription",
       ],
       note: "Herbal formulas are billed separately and fulfilled through Kamwo Herbal Pharmacy in New York City. Prescriptions may be picked up, messenger-delivered within Manhattan, or shipped.",
-      button: true,
+      action: {
+        label: "Book Appointment",
+        href: BOOKING_URL,
+        external: true,
+      },
     },
     {
-      title: "Concierge In-Home Care",
-      price: "Contact for Pricing / Packages",
+      title: "In-Home Care",
+      price: "Starts at $250",
       image: "/nyc.jpg",
       imageAlt: "Acupuncture house call in New York City",
       description:
@@ -64,11 +72,14 @@ export default function ServicesPage() {
         "Customized herbal formula prescription",
       ],
       note: "Herbal formulas are billed separately and fulfilled through Kamwo Herbal Pharmacy in New York City. Prescriptions may be picked up, messenger-delivered within Manhattan, or shipped. In-home appointments require client-provided round-trip transportation via Uber or a similar service.",
-      button: false,
+      action: {
+        label: "Request Availability",
+        href: "mailto:Andy@acuwithandy.com",
+      },
     },
     {
       title: "Travel + Special Event",
-      price: "Contact for Pricing",
+      price: "Custom Rates",
       image: "/spa.jpg",
       imageAlt: "Wellness retreat treatment room",
       description:
@@ -79,7 +90,10 @@ export default function ServicesPage() {
         "Ongoing care while traveling",
       ],
       note: "Each experience is customized to the setting and individual needs. Please inquire for availability and custom rates.",
-      button: false,
+      action: {
+        label: "Request Availability",
+        href: "mailto:Andy@acuwithandy.com",
+      },
     },
   ];
 
@@ -118,7 +132,7 @@ export default function ServicesPage() {
                           width={700}
                           height={450}
                           className={`h-56 w-full rounded-3xl border border-[#E6E2D8] shadow-sm ${
-                            service.title === "Acupuncture + Herbal Care"
+                            service.title === "Acupuncture + Herbal"
                               ? "object-cover object-[center_15%]"
                               : service.title === "Concierge In-Home Care"
                               ? "object-cover object-[center_95%]"
@@ -148,14 +162,18 @@ export default function ServicesPage() {
                     </ul>
                   </div>
 
-                  {service.button && (
+                  {service.action && (
                     <a
-                      href={BOOKING_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href={service.action.href}
+                      target={service.action.external ? "_blank" : undefined}
+                      rel={
+                        service.action.external
+                          ? "noopener noreferrer"
+                          : undefined
+                      }
                       className="mt-8 inline-flex w-fit items-center justify-center rounded-full bg-[#F1FFE0] px-8 py-4 font-medium text-[#1F2A24] transition hover:bg-[#E2F5C8]"
                     >
-                      Book Appointment
+                      {service.action.label}
                     </a>
                   )}
 
