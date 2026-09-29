@@ -133,7 +133,7 @@ export default function ServicesBanner() {
                 className={`max-w-xl ${
                   slide.tone === "light" || slide.tone === "photo"
                     ? slide.tone === "light"
-                      ? "w-[68%] text-white md:w-[43%] md:max-w-lg"
+                      ? "w-[78%] text-white md:w-[55%] md:max-w-xl"
                       : "w-[60%] text-white md:w-[43%] md:max-w-lg"
                     : "ml-auto w-[62%] text-right text-white md:w-[54%]"
                 }`}
