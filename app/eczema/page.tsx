@@ -19,10 +19,10 @@ export const metadata: Metadata = {
 };
 
 const patterns = [
-  ["風", "Wind", "Itching and sudden flare-ups", "In TCM, Wind is associated with symptoms that change location, arise suddenly, or involve pronounced itching."],
-  ["濕", "Dampness", "Oozing and weeping lesions", "Dampness is a traditional pattern description sometimes used when lesions are weeping or slow to heal."],
-  ["熱", "Heat", "Redness and inflammation", "Heat is a traditional pattern description associated with visible redness, warmth, swelling, or irritation."],
-  ["虛", "Deficiency", "Chronicity and dryness", "Deficiency may be considered in longstanding presentations with dryness or recurring symptoms."],
+  ["Wind", "Itching and sudden flare-ups", "In TCM, Wind is associated with symptoms that change location, arise suddenly, or involve pronounced itching."],
+  ["Dampness", "Oozing and weeping lesions", "Dampness is a traditional pattern description sometimes used when lesions are weeping or slow to heal."],
+  ["Heat", "Redness and inflammation", "Heat is a traditional pattern description associated with visible redness, warmth, swelling, or irritation."],
+  ["Deficiency", "Chronicity and dryness", "Deficiency may be considered in longstanding presentations with dryness or recurring symptoms."],
 ];
 
 const conditions = [
@@ -101,7 +101,7 @@ export default function EczemaPage() {
                 Living with eczema
               </p>
               <h2 className="mt-4 max-w-md text-4xl leading-tight md:text-5xl" style={{ fontFamily: "var(--font-heading)" }}>
-                More than a skin condition.
+                Looking beyond the surface.
               </h2>
               <p className="mt-5 max-w-md text-base leading-7 text-[#1F2A24]/75">
                 Symptoms can shift over time and affect sleep, stress, confidence,
@@ -122,28 +122,42 @@ export default function EczemaPage() {
               ))}
             </div>
           </div>
-          <div className="mx-auto mt-10 grid max-w-7xl gap-8 border-t border-[#D9DCD3] pt-8 md:grid-cols-[0.8fr_1.2fr] md:gap-20">
-            <h3 className="text-2xl" style={{ fontFamily: "var(--font-heading)" }}>
-              Contributing factors:
-            </h3>
-            <div className="grid gap-8 sm:grid-cols-2">
-              <div>
-                <h4 className="text-xs font-semibold uppercase tracking-[0.16em] text-[#5B767B]">
-                  Internal factors
-                </h4>
-                <p className="mt-3 leading-7 text-[#1F2A24]/75">
-                  Genetics, stress, poor sleep, digestive function, immune function
-                </p>
-              </div>
-              <div>
-                <h4 className="text-xs font-semibold uppercase tracking-[0.16em] text-[#5B767B]">
-                  External factors
-                </h4>
-                <p className="mt-3 leading-7 text-[#1F2A24]/75">
-                  Hard water, heat, dryness, sweat, climate changes, foods,
-                  chemicals, fabrics, skin irritation
-                </p>
-              </div>
+          <div className="mx-auto mt-10 max-w-7xl border-t border-[#D9DCD3] pt-8">
+            <div className="grid gap-x-8 md:grid-cols-2">
+              <details className="group py-4">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 marker:hidden">
+                  <h4 className="text-xs font-semibold uppercase tracking-[0.16em] text-[#5B767B]">
+                    Internal factors
+                  </h4>
+                  <span className="text-2xl font-light text-[#5B767B] transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+                </summary>
+                <ul className="mt-3 list-disc space-y-1 pl-5 leading-7 text-[#1F2A24]/75">
+                  <li>Genetics</li>
+                  <li>Stress</li>
+                  <li>Poor sleep</li>
+                  <li>Digestive function</li>
+                  <li>Immune function</li>
+                </ul>
+              </details>
+              <details className="group py-4">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 marker:hidden">
+                  <h4 className="text-xs font-semibold uppercase tracking-[0.16em] text-[#5B767B]">
+                    External factors
+                  </h4>
+                  <span className="text-2xl font-light text-[#5B767B] transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+                </summary>
+                <ul className="mt-3 list-disc space-y-1 pl-5 leading-7 text-[#1F2A24]/75">
+                  <li>Hard water</li>
+                  <li>Heat</li>
+                  <li>Dryness</li>
+                  <li>Sweat</li>
+                  <li>Climate changes</li>
+                  <li>Foods</li>
+                  <li>Chemicals</li>
+                  <li>Fabrics</li>
+                  <li>Skin irritation</li>
+                </ul>
+              </details>
             </div>
           </div>
         </section>
@@ -169,17 +183,16 @@ export default function EczemaPage() {
               </p>
             </div>
             <div className="border-t border-[#BAC8C1]">
-              {patterns.map(([character, title, summary, detail]) => (
+              {patterns.map(([title, summary, detail]) => (
                 <details key={title} className="group border-b border-[#BAC8C1]">
-                  <summary className="grid cursor-pointer list-none grid-cols-[3.5rem_1fr_auto] items-center gap-4 py-5 marker:hidden md:py-6">
-                    <span className="text-3xl text-[#5B767B]" lang="zh">{character}</span>
+                  <summary className="grid cursor-pointer list-none grid-cols-[1fr_auto] items-center gap-4 py-5 marker:hidden md:py-6">
                     <span>
                       <span className="block text-2xl" style={{ fontFamily: "var(--font-heading)" }}>{title}</span>
                       <span className="mt-1 block text-sm text-[#1F2A24]/65">{summary}</span>
                     </span>
                     <span className="text-2xl font-light text-[#5B767B] transition-transform group-open:rotate-45" aria-hidden="true">+</span>
                   </summary>
-                  <p className="max-w-2xl pb-6 pl-14 text-sm leading-7 text-[#1F2A24]/75 md:pl-[4.5rem]">
+                  <p className="max-w-2xl pb-6 pl-4 text-sm leading-7 text-[#1F2A24]/75">
                     {detail}
                   </p>
                 </details>
@@ -202,7 +215,7 @@ export default function EczemaPage() {
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#5B767B]">Individualized care</p>
               <h2 className="mt-4 text-4xl leading-tight md:text-5xl" style={{ fontFamily: "var(--font-heading)" }}>
-                Treating the person behind the skin.
+                Treating the whole person, not just the skin.
               </h2>
               <p className="mt-5 leading-7 text-[#1F2A24]/75">
                 Care is tailored to your presentation, health history, and

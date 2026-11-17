@@ -44,8 +44,8 @@ export default function PsoriasisPage() {
                 Understanding psoriasis from a different perspective.
               </p>
               <p className="mt-5 max-w-xl text-base leading-7 text-[#1F2A24]/75 md:text-lg">
-                An integrative approach to psoriasis through acupuncture,
-                Chinese herbal medicine, and individualized care.
+                An integrative approach to chronic skin conditions through
+                acupuncture, Chinese herbal medicine, and individualized care.
               </p>
               <div className="mt-8">
                 <a
@@ -116,28 +116,35 @@ export default function PsoriasisPage() {
               ))}
             </div>
           </div>
-          <div className="mx-auto mt-10 grid max-w-7xl gap-8 border-t border-[#D9DCD3] pt-8 md:grid-cols-[0.8fr_1.2fr] md:gap-20">
-            <h3 className="text-2xl" style={{ fontFamily: "var(--font-heading)" }}>
-              Contributing factors:
-            </h3>
-            <div className="grid gap-8 sm:grid-cols-2">
-              <div>
-                <h4 className="text-xs font-semibold uppercase tracking-[0.16em] text-[#5B767B]">
-                  Internal factors
-                </h4>
-                <p className="mt-3 leading-7 text-[#1F2A24]/75">
-                  Genetics, immune activity, stress, infection or illness
-                </p>
-              </div>
-              <div>
-                <h4 className="text-xs font-semibold uppercase tracking-[0.16em] text-[#5B767B]">
-                  External factors
-                </h4>
-                <p className="mt-3 leading-7 text-[#1F2A24]/75">
-                  Skin injury or irritation, climate and environmental changes,
-                  certain medications such as lithium and antimalarials
-                </p>
-              </div>
+          <div className="mx-auto mt-10 max-w-7xl border-t border-[#D9DCD3] pt-8">
+            <div className="grid gap-x-8 md:grid-cols-2">
+              <details className="group py-4">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 marker:hidden">
+                  <h4 className="text-xs font-semibold uppercase tracking-[0.16em] text-[#5B767B]">
+                    Internal factors
+                  </h4>
+                  <span className="text-2xl font-light text-[#5B767B] transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+                </summary>
+                <ul className="mt-3 list-disc space-y-1 pl-5 leading-7 text-[#1F2A24]/75">
+                  <li>Genetics</li>
+                  <li>Immune activity</li>
+                  <li>Stress</li>
+                  <li>Infection or illness</li>
+                </ul>
+              </details>
+              <details className="group py-4">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 marker:hidden">
+                  <h4 className="text-xs font-semibold uppercase tracking-[0.16em] text-[#5B767B]">
+                    External factors
+                  </h4>
+                  <span className="text-2xl font-light text-[#5B767B] transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+                </summary>
+                <ul className="mt-3 list-disc space-y-1 pl-5 leading-7 text-[#1F2A24]/75">
+                  <li>Skin injury or irritation</li>
+                  <li>Climate and environmental changes</li>
+                  <li>Certain medications, including lithium and antimalarials</li>
+                </ul>
+              </details>
             </div>
           </div>
         </section>
@@ -165,22 +172,21 @@ export default function PsoriasisPage() {
             </div>
             <div className="border-t border-[#BAC8C1]">
               {[
-                ["熱", "Blood Heat", "Redness, inflammation, rapid flare-ups, and itching", "In TCM, Blood Heat is a traditional pattern description sometimes associated with redness, irritation, and quickly developing flare-ups."],
-                ["燥", "Blood Dryness", "Dry, thickened, or scaling skin", "Blood Dryness is a traditional pattern description that may be considered when skin is persistently dry, thickened, or scaling."],
-                ["瘀", "Blood Stasis", "Longstanding plaques or darker discoloration", "Blood Stasis is a traditional pattern description sometimes considered with chronic, stubborn plaques or darker discoloration."],
-                ["風", "Wind", "Itching and changing or spreading symptoms", "Wind is associated in TCM with itching and symptoms that may shift or spread over time."],
-                ["濕熱", "Damp-Heat", "Inflamed or irritated presentations", "Damp-Heat is a traditional pattern description that may be considered with inflamed, irritated, or occasionally weeping areas."],
-              ].map(([character, title, summary, detail]) => (
+                ["Blood Heat", "Redness, inflammation, rapid flare-ups, and itching", "In TCM, Blood Heat is a traditional pattern description sometimes associated with redness, irritation, and quickly developing flare-ups."],
+                ["Blood Dryness", "Dry, thickened, or scaling skin", "Blood Dryness is a traditional pattern description that may be considered when skin is persistently dry, thickened, or scaling."],
+                ["Blood Stasis", "Longstanding plaques or darker discoloration", "Blood Stasis is a traditional pattern description sometimes considered with chronic, stubborn plaques or darker discoloration."],
+                ["Wind", "Itching and changing or spreading symptoms", "Wind is associated in TCM with itching and symptoms that may shift or spread over time."],
+                ["Damp-Heat", "Inflamed or irritated presentations", "Damp-Heat is a traditional pattern description that may be considered with inflamed, irritated, or occasionally weeping areas."],
+              ].map(([title, summary, detail]) => (
                 <details key={title} className="group border-b border-[#BAC8C1]">
-                  <summary className="grid cursor-pointer list-none grid-cols-[3.5rem_1fr_auto] items-center gap-4 py-5 marker:hidden md:py-6">
-                    <span className="text-3xl text-[#5B767B]" lang="zh">{character}</span>
+                  <summary className="grid cursor-pointer list-none grid-cols-[1fr_auto] items-center gap-4 py-5 marker:hidden md:py-6">
                     <span>
                       <span className="block text-2xl" style={{ fontFamily: "var(--font-heading)" }}>{title}</span>
                       <span className="mt-1 block text-sm text-[#1F2A24]/65">{summary}</span>
                     </span>
                     <span className="text-2xl font-light text-[#5B767B] transition-transform group-open:rotate-45" aria-hidden="true">+</span>
                   </summary>
-                  <p className="max-w-2xl pb-6 pl-14 text-sm leading-7 text-[#1F2A24]/75 md:pl-[4.5rem]">{detail}</p>
+                  <p className="max-w-2xl pb-6 pl-4 text-sm leading-7 text-[#1F2A24]/75">{detail}</p>
                 </details>
               ))}
             </div>
@@ -203,7 +209,7 @@ export default function PsoriasisPage() {
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#5B767B]">Individualized care</p>
               <h2 className="mt-4 text-4xl leading-tight md:text-5xl" style={{ fontFamily: "var(--font-heading)" }}>
-                Care shaped around you.
+                Treating the whole person, not just the skin.
               </h2>
               <p className="mt-5 leading-7 text-[#1F2A24]/75">
                 Your care plan is based on your psoriasis presentation, health
