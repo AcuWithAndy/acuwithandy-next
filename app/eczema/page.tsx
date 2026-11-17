@@ -40,7 +40,7 @@ export default function EczemaPage() {
       <main className="bg-[#FCFCF8] text-[#1F2A24]">
         <section className="px-6 py-14 md:py-24">
           <div className="mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-            <div className="max-w-2xl">
+            <div className="max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#5B767B]">
                 TCM Dermatology · New York City
               </p>
@@ -67,24 +67,24 @@ export default function EczemaPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-[#5B767B] px-6 py-3.5 text-sm font-medium text-white transition hover:bg-[#435F64]"
                 >
-                  Book an appointment <span className="ml-3" aria-hidden="true">↗</span>
+                  Book an Appointment
                 </a>
               </div>
             </div>
             <figure className="relative min-h-[340px] overflow-hidden bg-[#E8E9E3] md:min-h-[520px]">
               <Image
-                src="/dermatology.jpg"
-                alt="A close view of irritated skin associated with eczema"
+                src="/cream2.jpg"
+                alt="Cream used as part of a daily skin-care routine"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 55vw"
-                className="object-cover object-[center_42%]"
+                className="object-cover object-center"
               />
             </figure>
           </div>
         </section>
 
-        <nav aria-label="On this page" className="border-y border-[#D9DCD3] px-6">
+        <nav aria-label="On this page" className="hidden border-y border-[#D9DCD3] px-6 md:block">
           <div className="mx-auto flex max-w-7xl flex-wrap gap-x-8 gap-y-3 py-4 text-sm text-[#435F64]">
             <a className="hover:underline" href="#symptoms">Symptoms</a>
             <a className="hover:underline" href="#perspective">TCM perspective</a>
@@ -214,13 +214,14 @@ export default function EczemaPage() {
                   ["02", "Chinese herbal medicine", "An individualized herbal prescription based on your TCM presentation and health history."],
                   ["03", "Lifestyle & nutrition", "Guidance around diet, sleep, stress, and daily habits."],
                 ].map(([number, title, text]) => (
-                  <div key={title} className="grid grid-cols-[2.5rem_1fr] gap-3 border-t border-[#D9DCD3] py-5">
-                    <span className="pt-1 text-xs text-[#5B767B]">{number}</span>
-                    <div>
+                  <details key={title} className="group border-t border-[#D9DCD3] py-5">
+                    <summary className="grid cursor-pointer list-none grid-cols-[2.5rem_1fr_auto] items-center gap-3 marker:hidden">
+                      <span className="text-xs text-[#5B767B]">{number}</span>
                       <h3 className="text-xl" style={{ fontFamily: "var(--font-heading)" }}>{title}</h3>
-                      <p className="mt-2 text-sm leading-6 text-[#1F2A24]/70">{text}</p>
-                    </div>
-                  </div>
+                      <span className="text-2xl font-light text-[#5B767B] transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+                    </summary>
+                    <p className="mt-3 pl-[2.5rem] text-sm leading-6 text-[#1F2A24]/70 md:pl-12">{text}</p>
+                  </details>
                 ))}
               </div>
             </div>
@@ -240,11 +241,11 @@ export default function EczemaPage() {
               </p>
               <figure className="relative mt-8 min-h-[300px] overflow-hidden bg-[#E8E9E3]">
                 <Image
-                  src="/cream.jpg"
-                  alt="Cream used as part of a daily skin-care routine"
+                  src="/dermatology.jpg"
+                  alt="A close view of irritated skin associated with eczema"
                   fill
                   sizes="(max-width: 1024px) 100vw, 35vw"
-                  className="object-cover object-center"
+                  className="object-cover object-[center_42%]"
                 />
               </figure>
             </div>
@@ -308,7 +309,7 @@ export default function EczemaPage() {
               rel="noopener noreferrer"
               className="inline-flex w-fit shrink-0 items-center justify-center bg-[#F1FFE0] px-6 py-3.5 text-sm font-medium text-[#1F2A24] transition hover:bg-[#E2F5C8]"
             >
-              Book an appointment <span className="ml-3" aria-hidden="true">↗</span>
+              Book an Appointment
             </a>
           </div>
         </section>
