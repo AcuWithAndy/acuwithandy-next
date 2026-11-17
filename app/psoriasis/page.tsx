@@ -172,22 +172,16 @@ export default function PsoriasisPage() {
             </div>
             <div className="border-t border-[#BAC8C1]">
               {[
-                ["Blood Heat", "Redness, inflammation, rapid flare-ups, and itching", "In TCM, Blood Heat is a traditional pattern description sometimes associated with redness, irritation, and quickly developing flare-ups."],
-                ["Blood Dryness", "Dry, thickened, or scaling skin", "Blood Dryness is a traditional pattern description that may be considered when skin is persistently dry, thickened, or scaling."],
-                ["Blood Stasis", "Longstanding plaques or darker discoloration", "Blood Stasis is a traditional pattern description sometimes considered with chronic, stubborn plaques or darker discoloration."],
-                ["Wind", "Itching and changing or spreading symptoms", "Wind is associated in TCM with itching and symptoms that may shift or spread over time."],
-                ["Damp-Heat", "Inflamed or irritated presentations", "Damp-Heat is a traditional pattern description that may be considered with inflamed, irritated, or occasionally weeping areas."],
-              ].map(([title, summary, detail]) => (
-                <details key={title} className="group border-b border-[#BAC8C1]">
-                  <summary className="grid cursor-pointer list-none grid-cols-[1fr_auto] items-center gap-4 py-5 marker:hidden md:py-6">
-                    <span>
-                      <span className="block text-2xl" style={{ fontFamily: "var(--font-heading)" }}>{title}</span>
-                      <span className="mt-1 block text-sm text-[#1F2A24]/65">{summary}</span>
-                    </span>
-                    <span className="text-2xl font-light text-[#5B767B] transition-transform group-open:rotate-45" aria-hidden="true">+</span>
-                  </summary>
-                  <p className="max-w-2xl pb-6 pl-4 text-sm leading-7 text-[#1F2A24]/75">{detail}</p>
-                </details>
+                ["Blood Heat", "Redness, inflammation, rapid flare-ups, and itching"],
+                ["Blood Dryness", "Dry, thickened, or scaling skin"],
+                ["Blood Stasis", "Longstanding plaques or darker discoloration"],
+                ["Wind", "Itching and changing or spreading symptoms"],
+                ["Damp-Heat", "Inflamed or irritated presentations"],
+              ].map(([title, summary]) => (
+                <article key={title} className="border-b border-[#BAC8C1] py-5 md:py-6">
+                  <h3 className="text-2xl" style={{ fontFamily: "var(--font-heading)" }}>{title}</h3>
+                  <p className="mt-1 text-sm leading-6 text-[#1F2A24]/65">{summary}</p>
+                </article>
               ))}
             </div>
           </div>
@@ -218,19 +212,15 @@ export default function PsoriasisPage() {
               </p>
               <div className="mt-8">
                 {[
-                  ["01", "Acupuncture", "Acupuncture may be included as part of an individualized approach to symptom management and overall well-being."],
-                  ["02", "Chinese herbal medicine", "An herbal prescription may be considered based on your TCM presentation, health history, and current medications."],
-                  ["03", "Cupping & gua sha", "These techniques may be discussed as part of a personalized care plan when appropriate."],
-                  ["04", "Lifestyle & nutrition", "Guidance may include conversations about stress, sleep, diet, and daily routines."],
-                ].map(([number, title, text]) => (
-                  <details key={title} className="group border-t border-[#D9DCD3] py-5">
-                    <summary className="grid cursor-pointer list-none grid-cols-[2.5rem_1fr_auto] items-center gap-3 marker:hidden">
-                      <span className="text-xs text-[#5B767B]">{number}</span>
-                      <h3 className="text-xl" style={{ fontFamily: "var(--font-heading)" }}>{title}</h3>
-                      <span className="text-2xl font-light text-[#5B767B] transition-transform group-open:rotate-45" aria-hidden="true">+</span>
-                    </summary>
-                    <p className="mt-3 pl-[2.5rem] text-sm leading-6 text-[#1F2A24]/70 md:pl-12">{text}</p>
-                  </details>
+                  ["01", "Acupuncture"],
+                  ["02", "Chinese herbal medicine"],
+                  ["03", "Cupping & gua sha"],
+                  ["04", "Lifestyle & nutrition"],
+                ].map(([number, title]) => (
+                  <div key={title} className="grid grid-cols-[2.5rem_1fr] items-center gap-3 border-t border-[#D9DCD3] py-5">
+                    <span className="text-xs text-[#5B767B]">{number}</span>
+                    <h3 className="text-xl" style={{ fontFamily: "var(--font-heading)" }}>{title}</h3>
+                  </div>
                 ))}
               </div>
             </div>
@@ -304,7 +294,7 @@ export default function PsoriasisPage() {
             </div>
             <div className="divide-y divide-[#D9D4C9] border-y border-[#D9D4C9]">
               {[
-                ["How long does psoriasis treatment take?", "The timeline depends on the type, duration, and individual presentation of psoriasis. Responses to care vary, and results are not guaranteed."],
+                ["How long does psoriasis treatment take?", "The timeline for psoriasis treatment depends on the severity, duration, and overall presentation of the condition. Some patients report changes over several weeks of consistent care."],
                 ["Do I need to use acupuncture and Chinese herbs together?", "Not necessarily. Acupuncture and Chinese herbal medicine may be used together or individually, depending on your needs and health history. Your practitioner can discuss the options with you."],
                 ["Can I use acupuncture and Chinese herbs alongside my current psoriasis treatment?", "Complementary care may be used alongside conventional dermatological care. Share your medications and supplements with your practitioner so potential interactions can be reviewed, and continue to follow your medical provider’s advice."],
                 ["Can acupuncture help psoriatic arthritis?", "Acupuncture may be discussed as complementary support for discomfort, but it does not treat the underlying disease. Talk with your rheumatologist or medical provider about joint symptoms and treatment options."],

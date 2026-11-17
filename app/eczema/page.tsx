@@ -19,10 +19,10 @@ export const metadata: Metadata = {
 };
 
 const patterns = [
-  ["Wind", "Itching and sudden flare-ups", "In TCM, Wind is associated with symptoms that change location, arise suddenly, or involve pronounced itching."],
-  ["Dampness", "Oozing and weeping lesions", "Dampness is a traditional pattern description sometimes used when lesions are weeping or slow to heal."],
-  ["Heat", "Redness and inflammation", "Heat is a traditional pattern description associated with visible redness, warmth, swelling, or irritation."],
-  ["Deficiency", "Chronicity and dryness", "Deficiency may be considered in longstanding presentations with dryness or recurring symptoms."],
+  ["Wind", "Itching and sudden flare-ups"],
+  ["Dampness", "Oozing and weeping lesions"],
+  ["Heat", "Redness and inflammation"],
+  ["Deficiency", "Chronicity and dryness"],
 ];
 
 const conditions = [
@@ -175,7 +175,7 @@ export default function EczemaPage() {
                 TCM considers patterns of internal imbalance alongside external
                 factors affecting the skin. Classical texts describe eczema as
                 Shi Zhen (&quot;damp eruption&quot;) and Feng Shi Chuang (&quot;wind-damp sore&quot;).
-                Select a pattern to learn more.
+                Common TCM patterns include:
               </p>
               <p className="mt-5 border-l-2 border-[#5B767B] pl-4 text-sm leading-6 text-[#1F2A24]/70">
                 Pattern identification is individualized. These descriptions
@@ -183,19 +183,11 @@ export default function EczemaPage() {
               </p>
             </div>
             <div className="border-t border-[#BAC8C1]">
-              {patterns.map(([title, summary, detail]) => (
-                <details key={title} className="group border-b border-[#BAC8C1]">
-                  <summary className="grid cursor-pointer list-none grid-cols-[1fr_auto] items-center gap-4 py-5 marker:hidden md:py-6">
-                    <span>
-                      <span className="block text-2xl" style={{ fontFamily: "var(--font-heading)" }}>{title}</span>
-                      <span className="mt-1 block text-sm text-[#1F2A24]/65">{summary}</span>
-                    </span>
-                    <span className="text-2xl font-light text-[#5B767B] transition-transform group-open:rotate-45" aria-hidden="true">+</span>
-                  </summary>
-                  <p className="max-w-2xl pb-6 pl-4 text-sm leading-7 text-[#1F2A24]/75">
-                    {detail}
-                  </p>
-                </details>
+              {patterns.map(([title, summary]) => (
+                <article key={title} className="border-b border-[#BAC8C1] py-5 md:py-6">
+                  <h3 className="text-2xl" style={{ fontFamily: "var(--font-heading)" }}>{title}</h3>
+                  <p className="mt-1 text-sm leading-6 text-[#1F2A24]/65">{summary}</p>
+                </article>
               ))}
             </div>
           </div>
@@ -223,18 +215,14 @@ export default function EczemaPage() {
               </p>
               <div className="mt-8">
                 {[
-                  ["01", "Acupuncture", "Part of an individualized approach to symptom management and overall well-being."],
-                  ["02", "Chinese herbal medicine", "An individualized herbal prescription based on your TCM presentation and health history."],
-                  ["03", "Lifestyle & nutrition", "Guidance around diet, sleep, stress, and daily habits."],
-                ].map(([number, title, text]) => (
-                  <details key={title} className="group border-t border-[#D9DCD3] py-5">
-                    <summary className="grid cursor-pointer list-none grid-cols-[2.5rem_1fr_auto] items-center gap-3 marker:hidden">
-                      <span className="text-xs text-[#5B767B]">{number}</span>
-                      <h3 className="text-xl" style={{ fontFamily: "var(--font-heading)" }}>{title}</h3>
-                      <span className="text-2xl font-light text-[#5B767B] transition-transform group-open:rotate-45" aria-hidden="true">+</span>
-                    </summary>
-                    <p className="mt-3 pl-[2.5rem] text-sm leading-6 text-[#1F2A24]/70 md:pl-12">{text}</p>
-                  </details>
+                  ["01", "Acupuncture"],
+                  ["02", "Chinese herbal medicine"],
+                  ["03", "Lifestyle & nutrition"],
+                ].map(([number, title]) => (
+                  <div key={title} className="grid grid-cols-[2.5rem_1fr] items-center gap-3 border-t border-[#D9DCD3] py-5">
+                    <span className="text-xs text-[#5B767B]">{number}</span>
+                    <h3 className="text-xl" style={{ fontFamily: "var(--font-heading)" }}>{title}</h3>
+                  </div>
                 ))}
               </div>
             </div>
@@ -287,7 +275,7 @@ export default function EczemaPage() {
             </div>
             <div className="divide-y divide-[#D9D4C9] border-y border-[#D9D4C9]">
               {[
-                ["How long does eczema treatment take?", "The timeline for eczema treatment depends on the severity, duration, and overall presentation of the condition. Some patients report changes over several weeks of consistent care; timing varies, and results are not guaranteed."],
+                ["How long does eczema treatment take?", "The timeline for eczema treatment depends on the severity, duration, and overall presentation of the condition. Some patients report changes over several weeks of consistent care."],
                 ["Do I need to use acupuncture and Chinese herbs together?", "Not necessarily. Acupuncture and Chinese herbal medicine may be used together or individually, depending on your needs and health history. Your practitioner can discuss the options with you."],
                 ["Can I use acupuncture and Chinese herbs alongside my current medical treatment?", "Acupuncture and Chinese herbal medicine may be used alongside conventional dermatological care. Share your medications and supplements with your practitioner so potential interactions can be reviewed. Continue to follow your medical provider's advice."],
                 ["Do you treat topical steroid withdrawal (TSW)?", "Many people seek Chinese medicine as supportive care while navigating topical steroid withdrawal. Treatment is individualized and is not a substitute for medical guidance; consult your prescribing clinician about changes to topical medication."],
