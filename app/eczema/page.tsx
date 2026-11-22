@@ -243,7 +243,7 @@ export default async function EczemaPage() {
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#5B767B]">Eczema presentations</p>
               <h2 className="mt-4 text-4xl leading-tight md:text-5xl" style={{ fontFamily: "var(--font-heading)" }}>
-                Conditions we explore.
+                Different forms of eczema.
               </h2>
               <p className="mt-4 max-w-md leading-7 text-[#1F2A24]/70">
                 Different forms of eczema can bring different concerns. Care
