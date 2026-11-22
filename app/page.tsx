@@ -97,12 +97,61 @@ export default function Home() {
         {/* REVIEWS */}
         <ReviewCard />
 
+        {/* DERMATOLOGY */}
+        <section
+          style={{ backgroundColor: "#EFEBFA" }}
+          className="px-6 py-24 text-[#1F2A24]"
+        >
+          <div className="mx-auto max-w-6xl">
+            <div className="mb-14 grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-end md:gap-16">
+              <div>
+                <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#62757B]">
+                  Specialty Care
+                </p>
+                <h2
+                  className="text-5xl leading-[0.98] text-[#263B38] md:text-7xl"
+                  style={{ fontFamily: "var(--font-heading)" }}
+                >
+                  TCM{" "}
+                  <span className="italic text-[#5B767B]">Dermatology</span>
+                </h2>
+              </div>
+
+              <p className="max-w-xl border-l border-[#5B767B]/50 pl-6 text-lg leading-8 text-[#1F2A24]/80 md:text-xl">
+                Explore our approach to treating common dermatological
+                conditions using acupuncture, Chinese herbal medicine,
+                nutrition, and lifestyle modifications.
+              </p>
+            </div>
+
+            <ConditionCarousel />
+          </div>
+        </section>
+
+        {/* WAVE */}
+        <div
+          className="overflow-hidden leading-none"
+          style={{ backgroundColor: "#EFEBFA" }}
+        >
+          <svg
+            viewBox="0 0 1440 100"
+            xmlns="http://www.w3.org/2000/svg"
+            className="block h-20 w-full"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="#E7D0C3"
+              d="M0,40 C240,100 480,80 720,40 C960,0 1200,20 1440,100 L1440,100 L0,100 Z"
+            />
+          </svg>
+        </div>
+
         {/* SERVICES */}
-        <section className="bg-[#EFEBFA] px-8 py-24">
+        <section className="bg-[#E7D0C3] px-8 py-24">
           <div className="mx-auto max-w-7xl">
             <div className="mb-16 grid gap-10 md:grid-cols-2 md:items-end">
               <div>
-                <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#6F8F7A]">
+                <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#5B767B]">
                   Services
                 </p>
 
@@ -171,55 +220,6 @@ export default function Home() {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* WAVE */}
-        <div
-          style={{ backgroundColor: "#EFEBFA" }}
-          className="overflow-hidden leading-none"
-        >
-          <svg
-            viewBox="0 0 1440 100"
-            xmlns="http://www.w3.org/2000/svg"
-            className="block h-20 w-full"
-            preserveAspectRatio="none"
-          >
-            <path
-              fill="#E7D0C3"
-              d="M0,40 C240,100 480,80 720,40 C960,0 1200,20 1440,100 L1440,100 L0,100 Z"
-            />
-          </svg>
-        </div>
-
-        {/* DERMATOLOGY */}
-        <section
-          style={{ backgroundColor: "#E7D0C3" }}
-          className="px-6 py-24 text-[#1F2A24]"
-        >
-          <div className="mx-auto max-w-6xl">
-            <div className="mb-14 grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-end md:gap-16">
-              <div>
-                <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#5B767B]">
-                  Specialty Care
-                </p>
-                <h2
-                  className="text-5xl leading-[0.98] text-[#263B38] md:text-7xl"
-                  style={{ fontFamily: "var(--font-heading)" }}
-                >
-                  TCM{" "}
-                  <span className="italic text-[#5B767B]">Dermatology</span>
-                </h2>
-              </div>
-
-              <p className="max-w-xl border-l border-[#5B767B]/50 pl-6 text-lg leading-8 text-[#1F2A24]/80 md:text-xl">
-                Explore our approach to treating common dermatological
-                conditions using acupuncture, Chinese herbal medicine,
-                nutrition, and lifestyle modifications.
-              </p>
-            </div>
-
-            <ConditionCarousel />
           </div>
         </section>
 
