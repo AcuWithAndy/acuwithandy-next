@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import HomeBannerVideo from "../components/HomeBannerVideo";
 import Footer from "../components/Footer";
 import ReviewCard from "../components/ReviewCard";
+import ConditionCarousel from "../components/ConditionCarousel";
 import { BOOKING_URL } from "@/lib/booking";
 
 export default function Home() {
@@ -197,55 +198,28 @@ export default function Home() {
           className="px-6 py-24 text-[#1F2A24]"
         >
           <div className="mx-auto max-w-6xl">
-            <div className="mx-auto mb-14 max-w-3xl text-center">
-              <p className="mb-4 text-xs uppercase tracking-[0.3em] text-[#5B767B]">
-                Specialty Care
-              </p>
+            <div className="mb-14 grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-end md:gap-16">
+              <div>
+                <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#5B767B]">
+                  Specialty Care
+                </p>
+                <h2
+                  className="text-5xl leading-[0.98] text-[#263B38] md:text-7xl"
+                  style={{ fontFamily: "var(--font-heading)" }}
+                >
+                  TCM{" "}
+                  <span className="italic text-[#5B767B]">Dermatology</span>
+                </h2>
+              </div>
 
-              <h2
-                className="text-4xl md:text-5xl"
-                style={{ fontFamily: "var(--font-heading)" }}
-              >
-                TCM Dermatology
-              </h2>
-
-              <p className="mt-6 text-base leading-relaxed text-[#1F2A24]/75 md:text-lg">
+              <p className="max-w-xl border-l border-[#5B767B]/50 pl-6 text-lg leading-8 text-[#1F2A24]/80 md:text-xl">
                 Explore our approach to treating common dermatological
                 conditions using acupuncture, Chinese herbal medicine,
                 nutrition, and lifestyle modifications.
               </p>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-3">
-              {[
-                { title: "Eczema", href: "/eczema" },
-                { title: "Psoriasis", href: "/psoriasis" },
-                { title: "Acne", href: "/acne" },
-                { title: "Rosacea", href: "/rosacea" },
-                { title: "Urticaria", href: "/urticaria" },
-                {
-                  title: "Skin Infections",
-                  href: "/skin-infections",
-                },
-              ].map((condition) => (
-                <a
-                  key={condition.title}
-                  href={condition.href}
-                  className="group flex h-48 flex-col justify-between rounded-[2rem] border border-[#E6E2D8] bg-[#FCFCF8] p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
-                >
-                  <h3
-                    className="text-3xl leading-tight"
-                    style={{ fontFamily: "var(--font-heading)" }}
-                  >
-                    {condition.title}
-                  </h3>
-
-                  <span className="text-base font-medium text-[#5B767B] transition-colors duration-300 group-hover:text-[#4A4368]">
-                    Learn More →
-                  </span>
-                </a>
-              ))}
-            </div>
+            <ConditionCarousel />
           </div>
         </section>
 
