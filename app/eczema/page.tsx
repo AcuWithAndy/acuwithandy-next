@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import EczemaArticlesCarousel from "../../components/EczemaArticlesCarousel";
 import { BOOKING_URL } from "@/lib/booking";
+import { getPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
   title: "Eczema Acupuncture & Chinese Medicine NYC",
@@ -33,7 +35,14 @@ const conditions = [
   ["Topical steroid withdrawal", "Support for people navigating symptoms during topical steroid withdrawal."],
 ];
 
-export default function EczemaPage() {
+export default async function EczemaPage() {
+  const posts = await getPosts();
+  const eczemaPosts = posts.filter((post) =>
+    /eczema|atopic dermatitis|topical steroid withdrawal|\btsw\b/i.test(
+      [post.title, post.slug, post.excerpt, ...(post.tags ?? [])].join(" "),
+    ),
+  );
+
   return (
     <>
       <Navbar />
@@ -289,6 +298,34 @@ export default function EczemaPage() {
                 </details>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section
+          aria-labelledby="eczema-articles-heading"
+          className="bg-[#E9EFEB] px-6 py-16 md:py-24"
+        >
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-10 max-w-3xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#5B767B]">
+                From the journal
+              </p>
+              <h2
+                id="eczema-articles-heading"
+                className="mt-4 text-4xl leading-tight md:text-5xl"
+                style={{ fontFamily: "var(--font-heading)" }}
+              >
+                Eczema articles
+              </h2>
+            </div>
+            <EczemaArticlesCarousel
+              articles={eczemaPosts.map((post) => ({
+                title: post.title,
+                slug: post.slug,
+                excerpt: post.excerpt,
+                cover: post.cover,
+              }))}
+            />
           </div>
         </section>
 
