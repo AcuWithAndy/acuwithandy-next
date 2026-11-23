@@ -4,7 +4,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import EczemaArticlesCarousel from "../../components/EczemaArticlesCarousel";
 import { BOOKING_URL } from "@/lib/booking";
-import { getPosts } from "@/lib/blog";
+import { getPosts, isEczemaPost } from "@/lib/blog";
 
 export const metadata: Metadata = {
   title: "Eczema Acupuncture & Chinese Medicine NYC",
@@ -37,11 +37,7 @@ const conditions = [
 
 export default async function EczemaPage() {
   const posts = await getPosts();
-  const eczemaPosts = posts.filter((post) =>
-    /eczema|atopic dermatitis|topical steroid withdrawal|\btsw\b/i.test(
-      [post.title, post.slug, post.excerpt, ...(post.tags ?? [])].join(" "),
-    ),
-  );
+  const eczemaPosts = posts.filter(isEczemaPost);
 
   return (
     <>

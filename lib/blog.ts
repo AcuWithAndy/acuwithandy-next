@@ -10,6 +10,12 @@ const project = process.env.SANITY_PROJECT_ID || "3e0xd4u7";
 const dataset = process.env.SANITY_DATASET || "production";
 export const blogConfigured = Boolean(project);
 
+export function isEczemaPost(post: Pick<Post, "title" | "slug" | "excerpt" | "tags">) {
+  return /eczema|atopic dermatitis|topical steroid withdrawal|\btsw\b/i.test(
+    [post.title, post.slug, post.excerpt, ...(post.tags ?? [])].join(" "),
+  );
+}
+
 // Only the published perspective is requested. No credential is sent to the browser.
 export const getPosts = cache(async (): Promise<Post[]> => {
   if (!project) return [];

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import BlogBody from "@/components/BlogBody";
-import { formatDate, getPosts, readTime } from "@/lib/blog";
+import { formatDate, getPosts, isEczemaPost, readTime } from "@/lib/blog";
 
 type Props = { params: Promise<{ slug: string }> };
 export const dynamic = "force-dynamic";
@@ -18,8 +18,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function Article({ params }: Props) {
   const { slug } = await params;
-  const post = (await getPosts()).find(post => post.slug === slug);
+  const posts = await getPosts();
+  const post = posts.find(post => post.slug === slug);
   if (!post) notFound();
+  const eczemaArticle = isEczemaPost(post);
+  const relatedEczemaPosts = eczemaArticle
+    ? posts.filter(
+        relatedPost =>
+          isEczemaPost(relatedPost) && relatedPost.slug !== post.slug,
+      )
+    : [];
   return <article className="blog-article">
     <header className="blog-hero blog-article-heading"><div className="blog-reading">
       <Link href="/blog" className="blog-back">← All articles</Link>
@@ -34,6 +42,33 @@ export default async function Article({ params }: Props) {
       </figure>}
       <BlogBody body={post.body} />
       {post.tags?.length ? <ul className="blog-tags" aria-label="Article topics">{post.tags.map(tag => <li key={tag}>{tag}</li>)}</ul> : null}
+      {eczemaArticle && (
+        <nav className="mt-14 border-t border-[#62757b55] pt-8" aria-label="Related eczema content">
+          <h2 className="text-3xl leading-tight" style={{ fontFamily: "var(--font-heading)" }}>
+            More on eczema
+          </h2>
+          <ul className="mt-5 flex flex-wrap gap-3">
+            <li>
+              <Link
+                href="/eczema"
+                className="inline-flex min-h-11 items-center rounded-full border border-[#62757b66] px-4 py-2 text-sm text-[#365a62] transition hover:bg-[#E9EFEB] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#365a62]"
+              >
+                Eczema page
+              </Link>
+            </li>
+            {relatedEczemaPosts.map(relatedPost => (
+              <li key={relatedPost.slug}>
+                <Link
+                  href={`/blog/${relatedPost.slug}`}
+                  className="inline-flex min-h-11 items-center rounded-full border border-[#62757b66] px-4 py-2 text-sm text-[#365a62] transition hover:bg-[#E9EFEB] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#365a62]"
+                >
+                  {relatedPost.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
       <div className="blog-end"><Link href="/blog">← Back to the journal</Link></div>
     </div>
   </article>;
