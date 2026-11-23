@@ -115,7 +115,7 @@ export default function ConditionCarousel() {
           <a
             key={condition.title}
             href={condition.href}
-            className="group relative h-[20rem] w-[78vw] max-w-[30rem] flex-none snap-start overflow-hidden rounded-[1.75rem] bg-[#E8E9E3] shadow-lg md:h-[25rem]"
+            className="group relative h-[32rem] w-[68vw] max-w-[17rem] flex-none snap-start overflow-hidden rounded-[1.75rem] bg-[#E8E9E3] shadow-lg md:h-[36rem] md:w-[18rem]"
           >
             <Image
               src={condition.image}
