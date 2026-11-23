@@ -235,58 +235,93 @@ export default function Home() {
             preserveAspectRatio="none"
           >
             <path
-              fill="#5B767B"
+              fill="#EFEBFA"
               d="M0,100 C240,20 480,0 720,40 C960,80 1200,100 1440,40 L1440,100 L0,100 Z"
             />
           </svg>
         </div>
 
         {/* CLINIC LOCATION */}
-        <section className="bg-[#5B767B] px-8 py-24">
-          <div className="mx-auto grid max-w-7xl gap-16 md:grid-cols-[1fr_1fr] md:items-center">
-            {/* Left Column */}
-            <div>
-              <p className="mb-4 text-sm uppercase tracking-[0.3em] text-white/70">
+        <section className="bg-[#EFEBFA] px-4 py-16 md:px-8 md:py-24">
+          <div className="mx-auto grid max-w-7xl gap-8 rounded-[2rem] border border-[#E6E2D8] bg-[#FCFCF8] p-6 shadow-sm md:gap-10 md:p-10 lg:grid-cols-[0.85fr_1.15fr]">
+            <div className="flex flex-col items-start">
+              <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#62757B]">
                 Midtown Manhattan
               </p>
 
-              <h2 className="text-5xl leading-tight text-white md:text-6xl">
+              <h2 className="text-5xl leading-tight text-[#263B38] md:text-6xl">
                 Visit the Clinic
               </h2>
 
-              <p className="mt-6 max-w-xl text-lg leading-8 text-white/80">
-                Located near Herald Square and Koreatown, the clinic offers
-                Acupuncture and Chinese Herbal Medicine by appointment in a
-                calm, private treatment setting.
+              <p className="mt-5 max-w-xl text-lg leading-8 text-[#1F2A24]/85">
+                I see patients for acupuncture and Chinese herbal medicine in a
+                private treatment room on Fifth Avenue, near Herald Square and
+                Koreatown.
               </p>
 
-              <p className="mt-8 text-xl font-medium leading-relaxed text-white">
-                303 Fifth Avenue
-                <br />
-                Suite 1209
+              <p className="mt-5 text-lg leading-7 text-[#1F2A24]">
+                303 Fifth Avenue, Suite 1209
                 <br />
                 New York, NY 10016
               </p>
 
               <a
+                href="https://www.google.com/maps/dir/?api=1&destination=303+Fifth+Avenue+Suite+1209+New+York+NY+10016"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 border-b border-[#1F2A24]/70 text-[#1F2A24] transition hover:border-[#5B767B] hover:text-[#5B767B]"
+              >
+                Get directions <span aria-hidden="true">↗</span>
+              </a>
+
+              <div className="mt-6 text-[#1F2A24]">
+                <h3 className="font-semibold">In-person appointments</h3>
+                <p className="mt-1 leading-7 text-[#1F2A24]/85">
+                  Monday · 6:30 AM–4 PM
+                  <br />
+                  Wednesday · 6:30 AM–2 PM
+                </p>
+              </div>
+
+              <a
                 href={BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-10 inline-block rounded-full bg-white px-8 py-4 text-[#5B767B] transition hover:bg-[#F2F2F2]"
+                className="mt-6 inline-flex rounded-xl bg-[#4B5C35] px-7 py-4 text-center font-semibold text-white transition hover:bg-[#3D4B2D]"
               >
-                Book Appointment
+                Book an In-Person Visit
+              </a>
+
+              <p className="mt-5 text-[#1F2A24]">Prefer to meet online?</p>
+              <a
+                href="/services"
+                className="mt-1 border-b border-[#1F2A24]/70 text-[#1F2A24] transition hover:border-[#5B767B] hover:text-[#5B767B]"
+              >
+                Explore virtual herbal consultations{" "}
+                <span aria-hidden="true">→</span>
               </a>
             </div>
 
-            {/* Right Column */}
-            <div className="overflow-hidden rounded-[2rem] bg-white shadow-2xl">
+            <div className="grid gap-3 lg:grid-rows-[1fr_1fr]">
+              <div className="relative order-2 h-64 overflow-hidden rounded-[1.5rem] bg-[#E8E9E3] md:h-[320px] lg:order-1">
+                <Image
+                  src="/acupuncture.jpg"
+                  alt="Acupuncture treatment room at the clinic"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 55vw"
+                  className="object-cover object-[center_70%]"
+                />
+              </div>
+
+              <div className="order-1 overflow-hidden rounded-[1.5rem] bg-white shadow-sm lg:order-2">
               <iframe
                 title="Acu With Andy Clinic Location"
                 src="https://www.google.com/maps?q=303%20Fifth%20Avenue%20Suite%201209%20New%20York%20NY%2010016&output=embed"
-                className="h-[500px] w-full border-0"
+                className="h-[320px] w-full border-0 md:h-[360px]"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
+              </div>
             </div>
           </div>
         </section>
