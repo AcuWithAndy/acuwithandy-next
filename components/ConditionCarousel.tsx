@@ -124,9 +124,9 @@ export default function ConditionCarousel() {
               sizes="(max-width: 768px) 78vw, 480px"
               className={`object-cover transition-transform duration-700 ${
                 condition.title === "Eczema"
-                  ? "object-[35%_center] group-hover:scale-[1.03]"
+                  ? "object-left group-hover:scale-[1.03]"
                   : condition.title === "Rosacea"
-                    ? "object-center scale-[0.82] group-hover:scale-[0.86]"
+                    ? "object-center scale-[0.7] group-hover:scale-[0.74]"
                     : "object-center group-hover:scale-[1.03]"
               }`}
             />
