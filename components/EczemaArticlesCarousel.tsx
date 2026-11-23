@@ -7,6 +7,7 @@ import { useEffect, useRef, useState } from "react";
 type EczemaArticle = {
   title: string;
   slug: string;
+  href?: string;
   excerpt: string;
   cover?: {
     url: string;
@@ -90,8 +91,8 @@ export default function EczemaArticlesCarousel({
       >
         {articles.map((article) => (
           <Link
-            key={article.slug}
-            href={`/blog/${article.slug}`}
+            key={article.href ?? article.slug}
+            href={article.href ?? `/blog/${article.slug}`}
             className="group relative h-[22rem] w-[82vw] max-w-[25rem] flex-none snap-start overflow-hidden rounded-[1.75rem] bg-[#E8E9E3] shadow-lg md:h-[25rem]"
           >
             {article.cover?.url ? (
@@ -124,7 +125,7 @@ export default function EczemaArticlesCarousel({
                 {article.excerpt}
               </p>
               <span className="mt-3 inline-block border-b border-white/80 pb-1 text-sm font-semibold text-white">
-                Read article →
+                {article.href ? "Explore page →" : "Read article →"}
               </span>
             </div>
           </Link>
