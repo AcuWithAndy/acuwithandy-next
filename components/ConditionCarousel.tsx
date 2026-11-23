@@ -117,6 +117,16 @@ export default function ConditionCarousel() {
             href={condition.href}
             className="group relative h-[32rem] w-[68vw] max-w-[17rem] flex-none snap-start overflow-hidden rounded-[1.75rem] bg-[#E8E9E3] shadow-lg md:h-[36rem] md:w-[18rem]"
           >
+            {condition.title === "Rosacea" && (
+              <Image
+                src={condition.image}
+                alt=""
+                aria-hidden="true"
+                fill
+                sizes="(max-width: 768px) 78vw, 480px"
+                className="scale-110 object-cover blur-xl"
+              />
+            )}
             <Image
               src={condition.image}
               alt={condition.alt}
