@@ -58,13 +58,7 @@ export default async function Article({ params }: Props) {
       <BlogBody body={articleBody} />
       {!eczemaArticle && post.tags?.length ? <ul className="blog-tags" aria-label="Article topics">{post.tags.map(tag => <li key={tag}>{tag}</li>)}</ul> : null}
       {eczemaArticle && (
-        <section className="mt-14 border-t border-[#62757b55] pt-8" aria-labelledby="related-eczema-heading">
-          <div className="mb-6">
-            <p className="blog-eyebrow !mb-3 text-[#5B767B]">Continue exploring</p>
-            <h2 id="related-eczema-heading" className="text-3xl leading-tight" style={{ fontFamily: "var(--font-heading)" }}>
-              Eczema resources
-            </h2>
-          </div>
+        <section className="mt-14 border-t border-[#62757b55] pt-8" aria-label="Related eczema pages and articles">
           <EczemaArticlesCarousel
             articles={[
               {
