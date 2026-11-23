@@ -30,7 +30,7 @@ export default function RosaceaPage() {
               <h1 className="mt-6 text-5xl leading-[1.05] text-[#263B38] md:text-7xl" style={{ fontFamily: "var(--font-heading)" }}>Rosacea &amp; Chinese Medicine</h1>
               <p className="mt-6 max-w-xl text-2xl leading-snug text-[#5B767B]" style={{ fontFamily: "var(--font-heading)" }}>Understanding rosacea from a different perspective.</p>
               <p className="mt-5 max-w-xl text-base leading-7 text-[#1F2A24]/75 md:text-lg">Individualized care for rosacea through acupuncture, Chinese herbal medicine, and guidance on everyday habits.</p>
-              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center justify-center bg-[#5B767B] px-6 py-3.5 text-sm font-medium text-white transition hover:bg-[#435F64]">Book an Appointment</a>
+              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center justify-center rounded-full bg-[#5B767B] px-6 py-3.5 text-sm font-medium text-white transition hover:bg-[#435F64]">Book an Appointment</a>
             </div>
             <figure className="relative min-h-[340px] overflow-hidden bg-[#E8E9E3] md:min-h-[520px]">
               <Image
@@ -116,7 +116,7 @@ export default function RosaceaPage() {
         <section className="bg-[#5B767B] px-6 py-16 text-[#FCFCF8] md:py-20">
           <div className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <div className="max-w-3xl"><p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/75">Andy Boehm, LAc</p><h2 className="mt-4 text-4xl leading-tight md:text-5xl" style={{ fontFamily: "var(--font-heading)" }}>Begin a conversation.</h2><p className="mt-4 max-w-2xl leading-7 text-white/80">Tell me how rosacea shows up for you, and we can talk through whether individualized Chinese medicine care fits your goals.</p></div>
-            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit shrink-0 items-center justify-center bg-[#F1FFE0] px-6 py-3.5 text-sm font-medium text-[#1F2A24] transition hover:bg-[#E2F5C8]">Book an Appointment</a>
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit shrink-0 items-center justify-center rounded-full bg-[#F1FFE0] px-6 py-3.5 text-sm font-medium text-[#1F2A24] transition hover:bg-[#E2F5C8]">Book an Appointment</a>
           </div>
         </section>
       </main>

@@ -61,7 +61,7 @@ export default function AcnePage() {
                 href={BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-8 inline-flex items-center justify-center bg-[#5B767B] px-6 py-3.5 text-sm font-medium text-white transition hover:bg-[#435F64]"
+                className="mt-8 inline-flex items-center justify-center rounded-full bg-[#5B767B] px-6 py-3.5 text-sm font-medium text-white transition hover:bg-[#435F64]"
               >
                 Book an Appointment
               </a>
@@ -309,7 +309,7 @@ export default function AcnePage() {
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex w-fit shrink-0 items-center justify-center bg-[#F1FFE0] px-6 py-3.5 text-sm font-medium text-[#1F2A24] transition hover:bg-[#E2F5C8]"
+              className="inline-flex w-fit shrink-0 items-center justify-center rounded-full bg-[#F1FFE0] px-6 py-3.5 text-sm font-medium text-[#1F2A24] transition hover:bg-[#E2F5C8]"
             >
               Book an Appointment
             </a>
