@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
 import { BOOKING_URL } from "@/lib/booking";
 
+const INSURANCE_URL = "https://patientportal.allacuservices.com/andyboehm";
+
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [faqOpen, setFaqOpen] = useState(false);
@@ -86,7 +88,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="hidden items-center gap-5 xl:flex">
+          <div className="hidden items-center gap-3 xl:flex">
             <div className="flex items-center gap-4 border-r border-white/20 pr-5">
               <a
                 href="https://instagram.com/acuwithandy"
@@ -118,6 +120,15 @@ export default function Navbar() {
                 <FaTiktok />
               </a>
             </div>
+
+            <a
+              href={INSURANCE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="whitespace-nowrap rounded-full bg-[#EFEBFA] px-4 py-3 text-sm font-medium text-[#4A4368] transition hover:bg-[#E2D9F3]"
+            >
+              Verify Insurance
+            </a>
 
             <a
               href={BOOKING_URL}
@@ -264,6 +275,16 @@ export default function Navbar() {
             className="mt-10 rounded-full bg-[#F1FFE0] py-5 text-center text-lg font-medium text-[#1F2A24] transition hover:bg-[#E2F5C8]"
           >
             Book Appointment
+          </a>
+
+          <a
+            href={INSURANCE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMenuOpen(false)}
+            className="mt-3 rounded-full bg-[#EFEBFA] py-5 text-center text-lg font-medium text-[#4A4368] transition hover:bg-[#E2D9F3]"
+          >
+            Verify Insurance
           </a>
         </div>
       </div>

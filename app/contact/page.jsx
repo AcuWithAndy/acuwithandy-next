@@ -43,182 +43,144 @@ export default function ContactPage() {
     <>
       <Navbar />
 
-      <main className="bg-[#5B767B] text-[#1F2A24]">
-        <div className="h-8"></div>
-
-        <section className="px-6 pb-28">
-          <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-[0.9fr_1.4fr]">
-            <div className="rounded-[2rem] bg-[#FCFCF8] p-8 shadow-xl md:p-10">
-              <h2 className="font-serif text-3xl">Get In Touch</h2>
-
-              <div className="mt-8 space-y-6 text-base leading-relaxed">
+      <main className="bg-[#5B767B] px-4 py-6 text-[#1F2A24] md:px-8 md:py-8 lg:pb-12">
+        <section className="mx-auto grid max-w-7xl overflow-hidden rounded-[2rem] shadow-2xl lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="flex min-h-[520px] flex-col bg-white p-6 text-[#1F2A24] md:p-10 lg:min-h-[560px] lg:p-12">
+            <div>
+              <p className="text-sm uppercase tracking-[0.28em] text-[#62757B]">
+                Get in touch
+              </p>
+              <h1 className="mt-4 max-w-lg font-serif text-5xl font-semibold leading-[0.98] text-[#405C61] md:text-6xl">
+                Have a question before booking?
+              </h1>
+              <p className="mt-4 max-w-md text-base leading-7 text-[#1F2A24]/80 md:text-lg">
+                I&apos;m happy to help you find the right next step for your
+                care. Fill out the form and I&apos;ll be in touch.
+              </p>
+              <address className="mt-6 space-y-3 not-italic">
                 <div>
-                  <p className="font-semibold">Location</p>
-                  <p>303 5th Avenue, Suite 1209</p>
-                  <p>New York, NY 10016</p>
-                </div>
-
-                <div>
-                  <p className="font-semibold">Phone (Text)</p>
-                  <a href="sms:+13477892785" className="hover:underline">
+                  <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#62757B]">
+                    Phone
+                  </p>
+                  <a
+                    href="tel:+13477892785"
+                    className="mt-1 inline-block transition hover:text-[#4A4368] hover:underline"
+                  >
                     (347) 789-2785
                   </a>
                 </div>
-
                 <div>
-                  <p className="font-semibold">Email</p>
-                  <a href="mailto:andy@acuwithandy.com" className="hover:underline">
+                  <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#62757B]">
+                    Email
+                  </p>
+                  <a
+                    href="mailto:andy@acuwithandy.com"
+                    className="mt-1 inline-block transition hover:text-[#4A4368] hover:underline"
+                  >
                     andy@acuwithandy.com
                   </a>
                 </div>
-
                 <div>
-                  <p className="font-semibold">Office Hours</p>
-                  <p>By appointment</p>
-                </div>
-
-                <div>
-                  <p className="font-semibold">Accepting New Patients</p>
-                </div>
-
-                <div className="w-full">
-                  <a
-                    href="https://patientportal.allacuservices.com/andyboehm"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center rounded-full bg-[#F1FFE0] px-6 py-3 text-sm font-medium text-[#1F2A24] transition hover:bg-[#E2F5C8]"
-                  >
-                    Verify Insurance Benefits
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="rounded-[2rem] bg-[#EFEBFA] p-8 shadow-xl md:p-10">
-              <h2 className="font-serif text-3xl">Contact Form</h2>
-
-              <form onSubmit={handleSubmit} className="mt-8 space-y-5">
-                <input
-                  name="name"
-                  required
-                  placeholder="Name"
-                  className="w-full rounded-xl border border-[#D4D1CC] bg-white px-5 py-4 outline-none focus:border-[#DDE6A8]"
-                />
-
-                <input
-                  name="email"
-                  required
-                  type="email"
-                  placeholder="Email"
-                  className="w-full rounded-xl border border-[#D4D1CC] bg-white px-5 py-4 outline-none focus:border-[#DDE6A8]"
-                />
-
-                <input
-                  name="phone"
-                  placeholder="Phone"
-                  className="w-full rounded-xl border border-[#D4D1CC] bg-white px-5 py-4 outline-none focus:border-[#DDE6A8]"
-                />
-
-                <select
-                  name="reason"
-                  className="w-full rounded-xl border border-[#D4D1CC] bg-white px-5 py-4 outline-none focus:border-[#DDE6A8]"
-                >
-                  <option value="">Reason for Contact</option>
-
-                  <option value="Schedule Appointment">
-                    Schedule Appointment
-                  </option>
-
-                  <option value="Insurance Verification">
-                    Insurance Verification
-                  </option>
-
-                  <option value="Herbal Refill">
-                    Herbal Refill
-                  </option>
-
-                  <option value="Workshops & Collaborations">
-                    Workshops & Collaborations
-                  </option>
-
-                  <option value="General Question">
-                    General Question
-                  </option>
-                </select>
-
-                <input
-                  name="subject"
-                  placeholder="Subject"
-                  className="w-full rounded-xl border border-[#D4D1CC] bg-white px-5 py-4 outline-none focus:border-[#DDE6A8]"
-                />
-
-                <textarea
-                  name="message"
-                  required
-                  placeholder="Message"
-                  rows="7"
-                  className="w-full resize-none rounded-xl border border-[#D4D1CC] bg-white px-5 py-4 outline-none focus:border-[#DDE6A8]"
-                />
-
-                <button
-                  type="submit"
-                  disabled={status === "sending"}
-                  className="rounded-full bg-[#F1FFE0] px-10 py-4 text-lg font-medium transition hover:scale-[1.02] hover:bg-[#E2F5C8] disabled:opacity-60"
-                >
-                  {status === "sending" ? "Sending..." : "Submit"}
-                </button>
-
-                {status === "success" && (
-                  <p className="text-sm font-medium">
-                    Thank you. Your message has been sent.
+                  <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#62757B]">
+                    Office
                   </p>
-                )}
-
-                {status === "error" && (
-                  <p className="text-sm font-medium text-red-700">
-                    Something went wrong. Please try again.
+                  <p className="mt-1">
+                    303 5th Avenue, Suite 1209
+                    <br />
+                    New York, NY 10016
                   </p>
-                )}
-              </form>
+                </div>
+              </address>
             </div>
           </div>
 
-          <div className="mx-auto mt-10 max-w-6xl overflow-hidden rounded-[2rem] bg-[#FCFCF8] shadow-xl">
-            <div className="grid items-start gap-4 md:grid-cols-2 md:gap-6">
-              <div className="p-8 md:px-10 md:py-8">
-                <p className="mb-3 text-sm uppercase tracking-[0.3em] text-[#62757B]">
-                  Community + Collaborations
+          <div className="relative overflow-hidden p-6 md:p-8 lg:p-10">
+            <Image
+              src="/herbs.jpg"
+              alt=""
+              aria-hidden="true"
+              fill
+              priority
+              sizes="(min-width: 1024px) 60vw, 100vw"
+              className="object-cover object-center"
+            />
+
+            <div className="relative z-10">
+              <form
+                onSubmit={handleSubmit}
+                className="grid grid-cols-1 gap-3 md:grid-cols-2"
+              >
+              <input
+                name="name"
+                required
+                placeholder="Name"
+                className="w-full rounded-xl border border-[#D4D1CC] bg-white px-5 py-3 outline-none transition focus:border-[#62757B] focus:ring-2 focus:ring-[#62757B]/15"
+              />
+
+              <input
+                name="email"
+                required
+                type="email"
+                placeholder="Email"
+                className="w-full rounded-xl border border-[#D4D1CC] bg-white px-5 py-3 outline-none transition focus:border-[#62757B] focus:ring-2 focus:ring-[#62757B]/15"
+              />
+
+              <input
+                name="phone"
+                placeholder="Phone"
+                className="w-full rounded-xl border border-[#D4D1CC] bg-white px-5 py-3 outline-none transition focus:border-[#62757B] focus:ring-2 focus:ring-[#62757B]/15"
+              />
+
+              <select
+                name="reason"
+                className="w-full rounded-xl border border-[#D4D1CC] bg-white px-5 py-3 outline-none transition focus:border-[#62757B] focus:ring-2 focus:ring-[#62757B]/15"
+              >
+                <option value="">Reason for Contact</option>
+                <option value="Schedule Appointment">Schedule Appointment</option>
+                <option value="Insurance Verification">
+                  Insurance Verification
+                </option>
+                <option value="Herbal Refill">Herbal Refill</option>
+                <option value="Workshops & Collaborations">
+                  Workshops & Collaborations
+                </option>
+                <option value="General Question">General Question</option>
+              </select>
+
+              <input
+                name="subject"
+                placeholder="Subject"
+                className="w-full rounded-xl border border-[#D4D1CC] bg-white px-5 py-3 outline-none transition focus:border-[#62757B] focus:ring-2 focus:ring-[#62757B]/15 md:col-span-2"
+              />
+
+              <textarea
+                name="message"
+                required
+                placeholder="Message"
+                rows="4"
+                className="w-full resize-y rounded-xl border border-[#D4D1CC] bg-white px-5 py-3 outline-none transition focus:border-[#62757B] focus:ring-2 focus:ring-[#62757B]/15 md:col-span-2"
+              />
+
+              <button
+                type="submit"
+                disabled={status === "sending"}
+                className="rounded-full bg-[#F1FFE0] px-8 py-3 text-lg font-medium text-[#1F2A24] transition hover:bg-[#E2F5C8] disabled:cursor-not-allowed disabled:opacity-60 md:col-span-2"
+              >
+                {status === "sending" ? "Sending..." : "Send message →"}
+              </button>
+
+              {status === "success" && (
+                <p className="text-sm font-medium text-[#315B43] md:col-span-2">
+                  Thank you. Your message has been sent.
                 </p>
+              )}
 
-                <h2 className="font-serif text-3xl leading-tight md:text-4xl">
-                  Beyond the Clinic
-                </h2>
-
-                <p className="mt-5 max-w-md leading-7 text-[#4B5C52]">
-                  I collaborate with businesses, wellness brands, and community
-                  organizations to develop thoughtful Chinese medicine
-                  programming—from seasonal wellness workshops and educational
-                  events to experiences featuring herbal medicine, food
-                  therapy, and acupressure.
+              {status === "error" && (
+                <p className="text-sm font-medium text-red-700 md:col-span-2">
+                  Something went wrong. Please try again.
                 </p>
-
-                <p className="mt-5 max-w-md text-sm leading-6 text-[#62757B]">
-                  Interested in hosting an event or collaborating? Send me a
-                  message through the contact form above.
-                </p>
-              </div>
-
-              <div className="flex justify-center p-6 md:justify-end md:p-8">
-                <div className="w-full max-w-[460px] overflow-hidden rounded-[1.5rem]">
-                  <Image
-                    src="/community-collage.png"
-                    alt="Andy Boehm sharing Chinese medicine, seasonal wellness, food therapy, and acupressure at a community event in New York City"
-                    width={1600}
-                    height={1350}
-                    className="h-auto w-full"
-                  />
-                </div>
-              </div>
+              )}
+              </form>
             </div>
           </div>
         </section>
