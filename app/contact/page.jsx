@@ -94,7 +94,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="relative overflow-hidden p-6 md:p-8 lg:p-10">
+          <div className="relative overflow-hidden p-6 md:p-8 lg:flex lg:items-center lg:p-10">
             <Image
               src="/herbs.jpg"
               alt=""
@@ -105,7 +105,7 @@ export default function ContactPage() {
               className="object-cover object-center"
             />
 
-            <div className="relative z-10">
+            <div className="relative z-10 w-full">
               <form
                 onSubmit={handleSubmit}
                 className="grid grid-cols-1 gap-3 md:grid-cols-2"
@@ -114,7 +114,7 @@ export default function ContactPage() {
                 name="name"
                 required
                 placeholder="Name"
-                className="w-full rounded-xl border border-[#D4D1CC] bg-white px-5 py-3 outline-none transition focus:border-[#62757B] focus:ring-2 focus:ring-[#62757B]/15"
+                className="w-full rounded-xl border border-[#D4D1CC] bg-white px-5 py-2.5 outline-none transition focus:border-[#62757B] focus:ring-2 focus:ring-[#62757B]/15"
               />
 
               <input
@@ -122,18 +122,18 @@ export default function ContactPage() {
                 required
                 type="email"
                 placeholder="Email"
-                className="w-full rounded-xl border border-[#D4D1CC] bg-white px-5 py-3 outline-none transition focus:border-[#62757B] focus:ring-2 focus:ring-[#62757B]/15"
+                className="w-full rounded-xl border border-[#D4D1CC] bg-white px-5 py-2.5 outline-none transition focus:border-[#62757B] focus:ring-2 focus:ring-[#62757B]/15"
               />
 
               <input
                 name="phone"
                 placeholder="Phone"
-                className="w-full rounded-xl border border-[#D4D1CC] bg-white px-5 py-3 outline-none transition focus:border-[#62757B] focus:ring-2 focus:ring-[#62757B]/15"
+                className="w-full rounded-xl border border-[#D4D1CC] bg-white px-5 py-2.5 outline-none transition focus:border-[#62757B] focus:ring-2 focus:ring-[#62757B]/15"
               />
 
               <select
                 name="reason"
-                className="w-full rounded-xl border border-[#D4D1CC] bg-white px-5 py-3 outline-none transition focus:border-[#62757B] focus:ring-2 focus:ring-[#62757B]/15"
+                className="w-full rounded-xl border border-[#D4D1CC] bg-white px-5 py-2.5 outline-none transition focus:border-[#62757B] focus:ring-2 focus:ring-[#62757B]/15"
               >
                 <option value="">Reason for Contact</option>
                 <option value="Schedule Appointment">Schedule Appointment</option>
@@ -150,21 +150,21 @@ export default function ContactPage() {
               <input
                 name="subject"
                 placeholder="Subject"
-                className="w-full rounded-xl border border-[#D4D1CC] bg-white px-5 py-3 outline-none transition focus:border-[#62757B] focus:ring-2 focus:ring-[#62757B]/15 md:col-span-2"
+                className="w-full rounded-xl border border-[#D4D1CC] bg-white px-5 py-2.5 outline-none transition focus:border-[#62757B] focus:ring-2 focus:ring-[#62757B]/15 md:col-span-2"
               />
 
               <textarea
                 name="message"
                 required
                 placeholder="Message"
-                rows="4"
-                className="w-full resize-y rounded-xl border border-[#D4D1CC] bg-white px-5 py-3 outline-none transition focus:border-[#62757B] focus:ring-2 focus:ring-[#62757B]/15 md:col-span-2"
+                rows="3"
+                className="w-full resize-y rounded-xl border border-[#D4D1CC] bg-white px-5 py-2.5 outline-none transition focus:border-[#62757B] focus:ring-2 focus:ring-[#62757B]/15 md:col-span-2"
               />
 
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="rounded-full bg-[#F1FFE0] px-8 py-3 text-lg font-medium text-[#1F2A24] transition hover:bg-[#E2F5C8] disabled:cursor-not-allowed disabled:opacity-60 md:col-span-2"
+                className="rounded-full bg-[#F1FFE0] px-8 py-2.5 text-lg font-medium text-[#1F2A24] transition hover:bg-[#E2F5C8] disabled:cursor-not-allowed disabled:opacity-60 md:col-span-2"
               >
                 {status === "sending" ? "Sending..." : "Send message →"}
               </button>
