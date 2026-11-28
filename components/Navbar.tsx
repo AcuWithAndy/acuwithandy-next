@@ -30,7 +30,7 @@ export default function Navbar() {
   return (
     <>
       <nav className="relative z-50 w-full border-b border-white/10 bg-[#5B767B]">
-        <div className="mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-6 px-6 py-5 md:px-8 xl:gap-x-12">
+        <div className="mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-x-6 gap-y-3 px-6 py-5 md:px-8 xl:gap-x-12">
           <a
             href="/"
             className="shrink-0 whitespace-nowrap text-xl leading-none text-white md:text-[1.35rem] lg:text-[1.45rem]"
@@ -140,13 +140,55 @@ export default function Navbar() {
             </a>
           </div>
 
-          <button
-            onClick={() => setMenuOpen(true)}
-            className="col-start-3 justify-self-end text-3xl leading-none text-white xl:hidden"
-            aria-label="Open menu"
-          >
-            ☰
-          </button>
+          <div className="col-start-3 flex items-center justify-self-end gap-2 xl:hidden">
+            <div className="hidden items-center gap-2 sm:flex">
+              <a
+                href={INSURANCE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="whitespace-nowrap rounded-full bg-[#EFEBFA] px-3 py-2 text-xs font-medium text-[#4A4368] transition hover:bg-[#E2D9F3]"
+              >
+                Verify Insurance
+              </a>
+
+              <a
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="whitespace-nowrap rounded-full bg-[#F1FFE0] px-3 py-2 text-xs font-medium text-[#1F2A24] transition hover:bg-[#E2F5C8]"
+              >
+                Book Appointment
+              </a>
+            </div>
+
+            <button
+              onClick={() => setMenuOpen(true)}
+              className="text-3xl leading-none text-white"
+              aria-label="Open menu"
+            >
+              ☰
+            </button>
+          </div>
+
+          <div className="col-span-3 grid grid-cols-2 gap-2 sm:hidden">
+            <a
+              href={INSURANCE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="whitespace-nowrap rounded-full bg-[#EFEBFA] px-2 py-2 text-center text-xs font-medium text-[#4A4368] transition hover:bg-[#E2D9F3]"
+            >
+              Verify Insurance
+            </a>
+
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="whitespace-nowrap rounded-full bg-[#F1FFE0] px-2 py-2 text-center text-xs font-medium text-[#1F2A24] transition hover:bg-[#E2F5C8]"
+            >
+              Book Appointment
+            </a>
+          </div>
         </div>
       </nav>
 

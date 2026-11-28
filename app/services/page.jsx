@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import ServicesBanner from "../../components/ServicesBanner";
 import { BOOKING_URL } from "@/lib/booking";
 
 export const metadata = {
@@ -102,8 +101,6 @@ export default function ServicesPage() {
       <Navbar />
 
       <main className="bg-[#EFEBFA] text-[#1F2A24]">
-        <ServicesBanner />
-
         <section className="px-6 py-20">
           <div className="mx-auto max-w-6xl">
             <div className="grid gap-8 md:grid-cols-2">
