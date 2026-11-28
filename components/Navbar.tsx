@@ -141,6 +141,36 @@ export default function Navbar() {
           </div>
 
           <div className="col-start-3 flex items-center justify-self-end gap-2 xl:hidden">
+            <div className="hidden items-center gap-3 border-r border-white/20 pr-3 md:flex">
+              <a
+                href="https://instagram.com/acuwithandy"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="text-base text-white transition hover:text-[#F1FFE0]"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href="https://facebook.com/profile.php?id=61571352335709"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="text-base text-white transition hover:text-[#F1FFE0]"
+              >
+                <FaFacebookF />
+              </a>
+              <a
+                href="https://tiktok.com/@acuwithandy"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TikTok"
+                className="text-base text-white transition hover:text-[#F1FFE0]"
+              >
+                <FaTiktok />
+              </a>
+            </div>
+
             <div className="hidden items-center gap-2 sm:flex">
               <a
                 href={INSURANCE_URL}
@@ -169,7 +199,6 @@ export default function Navbar() {
               ☰
             </button>
           </div>
-
         </div>
       </nav>
 
